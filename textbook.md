@@ -161,3 +161,38 @@ Q學習|Q學習實務|動態遊戲|Atari打磚塊
 第10章：建立一個生產就緒的 入侵偵測系統
 什麼是數據產品?|訓練|測試|部署|收回
 ```
+### Data Visualization
+
+```
+資料視覺化：使用Python與JavaScript
+Data Visualization with Python and Scrape, Clean, Explore & Transform Your Data
+作者： Kyran Dale  譯者： 林季岩 出版社：歐萊禮   出版日期：2017/04/18
+
+導論 
+第1章｜設置開發環境 
+
+Part I 基本工具 
+第2章｜Python與JavaScript程式語言銜接橋樑 
+第3章｜Python讀寫資料 
+第4章｜網站開發入門 
+
+Part II 取得資料  第5章｜使用Python從網站取得資料 第6章｜Scrapy和重量級爬取作業 
+
+Part III 使用Pandas清理與探索資料 
+第7章｜NumPy入門  第8章｜Pandas初步介紹  第9章｜Pandas清理資料 
+第10章｜Matplotlib視覺化資料  第11章｜Pandas探索資料 
+
+Part IV 提供資料 第12章｜提供資料  第13章｜Flask與RESTful API 
+
+Part V D3與資料視覺化
+第14章｜想像諾貝爾獎資料的視覺化呈現介面 
+第15章｜建構視覺化介面骨架 
+第16章｜D3入門—用直條圖說故事 
+第17章｜個別得獎視覺化 
+第18章｜D3與地圖 
+第19章｜個別得主資料視覺化 
+第20章｜選單列 
+第21章｜結語 
+
+附錄A 從開發走向產品
+```
