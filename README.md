@@ -63,6 +63,49 @@ Python機器學習Python Machine Learning
 ```
 ## Python Deep learning
 ```
+Deep Learning：用Python進行深度學習的基礎理論實作
+作者： 斎藤康毅  譯者： 吳嘉芳
+出版社：歐萊禮  出版日期：2017/08/17
+第一章 Python入門   第二章 感知器 
+第三章 神經網路   第四章 神經網路的學習  第五章 誤差反向傳播法 
+第六章 與學習有關的技巧  第七章 卷積神經網路  第八章 深度學習 
+附錄A Softmax-with-Loss層的計算圖 
+```
+```
+Getting started with TensorFlow<<深度學習快速入門：使用TensorFlow>>
+作者： Giancarlo Zaccone  譯者： 傅運文
+出版社：博碩  出版日期：2017/01/11
+
+Chapter 1 TensorFlow：基本概念
+機器學習與深度學習的基礎
+TensorFlow：總體概述
+Python的基礎
+安裝TensorFlow
+第一次實地操作 資料流圖形
+TensorFlow程式設計模型 如何使用TensorBoard
+
+Chapter 2 用TensorFlow求解數學問題
+張量資料結構  複數及碎形（fractals）  計算梯度（gradient） 隨機數值
+
+Chapter 3 機器學習簡介與應用
+線性迴歸演算法   分類（Classifiers）  資料群集（Data clustering）
+
+Chapter 4 類神經網路簡介
+什麼是類神經網路？
+單層感知器及其應用案例:邏輯斯迴歸（logistic regression） 
+多層感知器及其應用案例:函數近似（function approximation）
+
+Chapter 5 深度學習
+深度學習技術 | 卷積神經網路CNN  CNN架構  CNN的TensorFlow實作
+遞迴神經網路RNN  RNN架構  LSTM網路  使用TensorFlow進行自然語言處理
+
+Chapter 6 GPU程式設計和TensorFlow服務
+GPU程式設計 TensorFlow服務（TensorFlow Serving）
+如何安裝TensorFlow Serving  如何使用TensorFlow Serving
+訓練和輸出模型  執行session  載入與輸出一個TensorFlow模型  測試伺服器
+
+```
+```
 Python深度學習Python Deep Learning
 作者： Valentino Zocca, Gianmario Spacagna, Daniel Slater  
 譯者： 劉立民, 吳建華, 陳開煇 編者： Peter Roelants
