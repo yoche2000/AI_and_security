@@ -19,7 +19,7 @@
 # 2018.4.22
 
 ```
-早上:
+早上:Python machine learning
 
 下午:無線網路滲透測試
 ```
@@ -36,23 +36,23 @@
 # 2018.5.20
 
 ```
-早上:
+早上:Python machine learning
 
-下午:
+下午:Docker技術
 ```
 
 # 2018.6.3
 
 ```
-早上:
+早上:CNN
 
-下午:
+下午:network Forensics
 ```
 
 # 2018.6.17
 
 ```
-早上:
+早上:RNN
 
-下午:
+下午:memory Forensics
 ```
