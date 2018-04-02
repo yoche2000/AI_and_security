@@ -1,3 +1,6 @@
+# NumPy Beginner's Guide - Second Edition Ivan Idris April 2013
+
+有新版: NumPy: Beginner's Guide - Third Edition  Ivan Idris  June 2015
 
 ### 兩個向量a和b做加法運算
 ```
