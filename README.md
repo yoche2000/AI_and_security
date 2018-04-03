@@ -2,13 +2,17 @@
 
 ## Python for all
 ```
-
+自行上網購書
 ```
 
 ## Python data analysis:NumPy,Pandas,matplotlib,
 ```
-分析環境建置:anaconda
-https://www.anaconda.com/download/
+numpy——主要對其 N 維數組對象有用 http://www. numpy.org/
+pandas——Python 數據分析庫，包括數據框架（dataframes）等結構 http:// pandas.pydata.org/
+matplotlib——一個 2D 繪圖庫，可產生出版物質量的圖表 http:// matplotlib.org/
+scikit-learn——用於數據分析和數據挖掘的機器學習算法 http:// scikit-learn.org/stable /
+
+分析環境建置:anaconda:: https://www.anaconda.com/download/
 
 Python 3 與數據分析入門
 https://github.com/yenlung/Python-3-Data-Analysis-Basics
@@ -39,8 +43,11 @@ https://github.com/rasbt/python-machine-learning-book
 https://machine-learning-python.kspax.io/
 
 scikit-learn==> http://scikit-learn.org/
+http://sklearn.apachecn.org/cn/0.19.0/
+https://github.com/lzjqsdd/scikit-learn-doc-cn
 
 
+scikit-learn机器学习:常用算法
 
 
 •01 賦予電腦從數據中學習的能力
