@@ -1,11 +1,10 @@
 # 資料視覺化 data_visualization
 
-```
 使用套件
 >* matplotlib
 >* 
 >* 
-
+```
 畫底下圖形:
 直方圖（Histogram）
 散佈圖（Scatter plot）
