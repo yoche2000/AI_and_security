@@ -281,6 +281,18 @@ http://wangchuan.blog.caixin.com/archives/146374
 ```
 
 ```
+2012年十月, Geoffrey Hinton, 鄧力和其他幾位代表四個不同機構 (多倫多大學, 微軟, 穀歌, IBM) 的研究者, 聯合發表論文,
+"深度神經網路在語音辨識的聲學模型中的應用: 四個研究小組的共同觀點" 
+(Deep Neural Networks for Acoustic Modelling in Speech Recognition: The Shared Views of Four Research Groups ).
+
+研究者們借用了Hinton 使用的"限制玻爾茲曼機" (RBM) 的演算法, 對神經網路進行了"預培訓". 
+深度神經網路模型 (DNN), 在這裡, 替代了高斯混合模型 (GMM), 來估算識別文字的幾率.
+DNN-HMM 模型的表現, 全面超越了傳統的 GMM-HMM模型, 有的時候錯誤率降低超過20%以上.
+在google的一個語音輸入基準測試中,單詞錯誤率 (Word Error Rate) 最低達到了 12.3%
+谷歌的研究者 Jeff Dean 評價, "這是20年來,在語音辨識領域, 最大的一次性進步. ".
+
+```
+```
 Heroes of Deep Learning: Andrew Ng interviews Geoffrey Hinton
 https://www.youtube.com/watch?v=-eyhCTvrEtE
 
@@ -290,26 +302,14 @@ https://www.youtube.com/watch?v=rTawFwUvnLE
 Heroes of Deep Learning: Andrew Ng interviews Ian Goodfellow
 https://www.youtube.com/watch?v=pWAc9B2zJS4
 
-
-
- 
- 
-  
-  Deep Learning Chapter 1
-  Introduction presented by Ian Goodfellow
-
-  
-  
-  https://www.youtube.com/watch?v=vi7lACKOUao
+Deep Learning Chapter 1 Introduction presented by Ian Goodfellow
+https://www.youtube.com/watch?v=vi7lACKOUao
 
   
  
 
 ```
 
-```
-
-```
 
 ```
 
