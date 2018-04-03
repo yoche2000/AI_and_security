@@ -12,6 +12,9 @@
 長條圖（Bar plot）
 盒鬚圖（Box plot）
 ```
+## matplotlib
+
+https://github.com/yaojenkuo/learn_python_for_a_r_user/blob/master/day18.md
 
 ### 直方圖（Histogram）
 ```
