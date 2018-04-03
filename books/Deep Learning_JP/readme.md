@@ -79,16 +79,25 @@ plt.xlabel("x")
 ```
 
 
-## 第二章 感知器 
+## 第二章 感知器 Perceptron
 ```
 >* 1957年，Rosenblatt發明瞭感知機（或稱感知器，Perceptron），
 >* 是神經網路的雛形，同時也是支援向量機的基礎，在當時引起了不小的轟動。
 >* 感知機是二類分類的線性分類模型，其輸入為例項的特徵向量，輸出為例項的類別，取+1和-1二值。
 >* 感知機對應於輸入空間（特徵空間）中將例項劃分為正負兩類的分離超平面，屬於判別模型。
 >* 感知機學習旨在求出將訓練資料進行線性劃分的分離超平面。
-
+>* https://en.wikipedia.org/wiki/Frank_Rosenblatt
+>* https://en.wikipedia.org/wiki/Perceptron
 ```
+```
+>* 1969年，Minskey提出了著名的XOR問題
+>* "The Perceptron Controversy"或"The XOR Affair"
+>* 感知器在類似XOR問題的線性不可分資料的無力
 
+https://www.readhouse.net/articles/161164446/
+http://www.ifuun.com/a201664130138/
+```
+### 感知器 Perceptrond可解AND
 ```
 # coding: utf-8
 import numpy as np
@@ -109,7 +118,7 @@ if __name__ == '__main__':
         y = AND(xs[0], xs[1])
         print(str(xs) + " -> " + str(y))
 ```
-
+### 感知器 Perceptrond可解OR
 
 ```
 # coding: utf-8
@@ -131,7 +140,28 @@ if __name__ == '__main__':
         y = OR(xs[0], xs[1])
         print(str(xs) + " -> " + str(y))
 ```
+### 感知器 Perceptrond可解NAND
 
+```
+# coding: utf-8
+import numpy as np
+
+def NAND(x1, x2):
+    x = np.array([x1, x2])
+    w = np.array([-0.5, -0.5])
+    b = 0.7
+    tmp = np.sum(w*x) + b
+    if tmp <= 0:
+        return 0
+    else:
+        return 1
+
+if __name__ == '__main__':
+    for xs in [(0, 0), (1, 0), (0, 1), (1, 1)]:
+        y = NAND(xs[0], xs[1])
+        print(str(xs) + " -> " + str(y))
+```
+### 要解XOR==>多層
 
 ```
 # coding: utf-8
@@ -153,26 +183,6 @@ if __name__ == '__main__':
 ```
 
 
-```
-# coding: utf-8
-import numpy as np
-
-
-def NAND(x1, x2):
-    x = np.array([x1, x2])
-    w = np.array([-0.5, -0.5])
-    b = 0.7
-    tmp = np.sum(w*x) + b
-    if tmp <= 0:
-        return 0
-    else:
-        return 1
-
-if __name__ == '__main__':
-    for xs in [(0, 0), (1, 0), (0, 1), (1, 1)]:
-        y = NAND(xs[0], xs[1])
-        print(str(xs) + " -> " + str(y))
-```
 
 
 
