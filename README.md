@@ -1,4 +1,64 @@
-# AI_and_security
+# AI
+
+## NeuralArt 電腦作畫
+```
+https://www.slideshare.net/ckmarkohchang/a-neural-algorithm-of-artistic-style
+
+https://www.slideshare.net/perone/deep-learning-convolutional-neural-networks?next_slideshow=1
+
+Gatys, Leon A., Alexander S. Ecker, and Matthias Bethge. 
+“Image Style Transfer Using Convolutional Neural Networks.” 
+Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition. 2016.
+
+Gatys, Leon A., Alexander S. Ecker, and Matthias Bethge. 
+“A neural algorithm of artistic style.” arXiv preprint arXiv:1508.06576 (2015).
+
+https://github.com/jcjohnson/neural-style
+
+"Neural Art" in TensorFlow
+https://github.com/woodrush/neural-art-tf
+
+http://www.jianshu.com/p/9f03b61fdeac
+https://www.slideshare.net/ckmarkohchang/a-neural-algorithm-of-artistic-style
+
+
+```
+## Topics in AI
+```
+Convolutional Neural Networks(CNN)
+
+Recurrent Neural Networks(RNN) and LSTM
+
+深度殘差網路 
+
+Deep Neural Networks
+
+深度強化學習Deep Reinforcement Learning
+  Policy Network策略網路 、Value Network估值網路 
+  
+GAN對抗學習Generative Adversarial Networks
+https://www.slideshare.net/ckmarkohchang/generative-adversarial-networks
+CGAN DCGAN
+```
+## AI framework
+```
+H20
+http://h2o-release.s3.amazonaws.com/h2o/rel-vajda/4/index.html
+https://github.com/h2oai/h2o-tutorials
+
+1. Download H2O. This is a zip file that contains everything you need to get started.
+
+2. From your terminal, run:
+cd ~/Downloads
+unzip h2o-3.10.5.4.zip
+cd h2o-3.10.5.4
+java -jar h2o.jar
+
+3. Point your browser to http://localhost:54321
+
+
+```
+## AI_and_security
 
 ## Python for all
 ```
