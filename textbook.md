@@ -37,11 +37,19 @@ By William McKinney Publisher: O'Reilly Media  Release Date: October 2017
 ```
 ## Python machine learning:scikit-learn
 ```
+TensorFlow Machine Learning Cookbook Nick McClure February 2017
+https://github.com/nfmcclure/tensorflow_cookbook
+
+https://github.com/MorvanZhou/Reinforcement-learning-with-tensorflow
+
 機器學習：使用Python
 https://machine-learning-python.kspax.io/
 
-scikit-learn==> http://scikit-learn.org/
+https://github.com/htygithub/machine-learning-python
+https://github.com/dipanjanS/practical-machine-learning-with-python
 
+scikit-learn==> http://scikit-learn.org/
+https://ljalphabeta.gitbooks.io/python-/content/sklearn.html
 
 Python機器學習Python Machine Learning
 作者： Sebastian Raschka  譯者： 劉立民, 吳建華
@@ -63,6 +71,11 @@ Python機器學習Python Machine Learning
 ```
 ## Python Deep learning
 ```
+https://github.com/the-deep-learners/TensorFlow-LiveLessons
+https://github.com/thrillerist/TensorFlow-Tutorials
+https://github.com/Hvass-Labs/TensorFlow-Tutorials
+
+
 Deep Learning：用Python進行深度學習的基礎理論實作
 作者： 斎藤康毅  譯者： 吳嘉芳
 出版社：歐萊禮  出版日期：2017/08/17
