@@ -414,13 +414,65 @@ print "element N?" + str(example_to_visualize + 1)\
                     + " of the list plotted"
 
 ```
+
+## 線性迴歸演算法 
+
+```
+import numpy as np
+
+number_of_points = 200
+x_point = []
+y_point = []
+a = 0.22
+b = 0.78
+for i in range(number_of_points):
+    x = np.random.normal(0.0,0.5)
+    y = a*x + b +np.random.normal(0.0,0.1)
+    x_point.append([x])
+    y_point.append([y])
+
+
+import matplotlib.pyplot as plt
+
+plt.plot(x_point,y_point, 'o', label='Input Data')
+plt.legend()
+plt.show()
+
+import tensorflow as tf
+
+
+A = tf.Variable(tf.random_uniform([1], -1.0, 1.0))
+B = tf.Variable(tf.zeros([1]))
+y = A * x_point + B
+
+cost_function = tf.reduce_mean(tf.square(y - y_point))
+optimizer = tf.train.GradientDescentOptimizer(0.5)
+train = optimizer.minimize(cost_function)
+
+model = tf.initialize_all_variables()
+
+with tf.Session() as session:
+        session.run(model)
+        for step in range(0,21):
+                session.run(train)
+                if (step % 5) == 0:
+                        plt.plot(x_point, y_point,
+                                 'o',label='step = {}'.format(step))
+                        plt.plot(x_point,
+                                 session.run(A) * x_point + session.run(B))
+                        plt.legend()
+                        plt.show()
+```
+
+
 ## KMeans 
 ```
 K-Means 是 J. B. MacQueen 於1967年所提出的分群演算法
+https://zh.wikipedia.org/wiki/k-平均演算法
 必須事前設定群集的數量 k，然後找尋下列公式的極大值，以達到分群的最佳化之目的
 
 ```
-### 演算法
+### KMeans 演算法
 ```
 
 1. 隨機指派群集中心：
@@ -438,7 +490,7 @@ K-Means 是 J. B. MacQueen 於1967年所提出的分群演算法
 
 5. 持續反覆 3, 4 的步驟，一直執行到群集成員不再變動為止
 ```
-### 演算法實作
+### KMeans 演算法實作
 ```
 from __future__ import print_function
 
@@ -517,28 +569,359 @@ print("Test Accuracy:", sess.run(accuracy_op, feed_dict={X: test_x, Y: test_y}))
 
 ```
 
+### KNN 演算法
+```
+https://zh.wikipedia.org/wiki/最近鄰居法
+https://www.slideshare.net/ssuserf88631/knn-51511604
+https://www.youtube.com/watch?v=UqYde-LULfs
+```
 
+### KNN 演算法實作
+```
+import numpy as np
+import tensorflow as tf
+
+#Build the Training Set
+from tensorflow.examples.tutorials.mnist import input_data
+mnist = input_data.read_data_sets("/tmp/data/", one_hot=True)
+
+train_pixels,train_list_values = mnist.train.next_batch(100)
+test_pixels,test_list_of_values  = mnist.test.next_batch(10)
+
+
+train_pixel_tensor = tf.placeholder\
+                     ("float", [None, 784])
+test_pixel_tensor = tf.placeholder\
+                     ("float", [784])
+
+#Cost Function and distance optimization
+
+distance = tf.reduce_sum\
+           (tf.abs\
+            (tf.add(train_pixel_tensor, \
+                    tf.negative(test_pixel_tensor))), \
+            reduction_indices=1)
+
+pred = tf.arg_min(distance, 0)
+
+# Testing and algorithm evaluation
+
+accuracy = 0.
+init = tf.initialize_all_variables()
+with tf.Session() as sess:
+    sess.run(init)
+    for i in range(len(test_list_of_values)):
+        nn_index = sess.run(pred,\
+                feed_dict={train_pixel_tensor:train_pixels,\
+                test_pixel_tensor:test_pixels[i,:]})
+        print "Test N", i,"Predicted Class: ", \
+                np.argmax(train_list_values[nn_index]),\
+                "True Class: ", np.argmax(test_list_of_values[i])
+        if np.argmax(train_list_values[nn_index])\
+                == np.argmax(test_list_of_values[i]):
+            accuracy += 1./len(test_pixels)
+    print "Result = ", accuracy
+
+```
+
+## Chapter 4 類神經網路簡介
+
+### 單層感知器及其應用案例:邏輯斯迴歸（logistic regression） 
+
+```
+# Import MINST data
+#import input_data
+
+import tensorflow as tf
+import matplotlib.pyplot as plt
+
+from tensorflow.examples.tutorials.mnist import input_data
+mnist = input_data.read_data_sets("/tmp/data/", one_hot=True)
+
+# Parameters
+learning_rate = 0.01
+training_epochs = 25
+batch_size = 100
+display_step = 1
+
+# tf Graph Input
+x = tf.placeholder("float", [None, 784]) # mnist data image of shape 28*28=784
+y = tf.placeholder("float", [None, 10]) # 0-9 digits recognition => 10 classes
+
+# Create model
+
+# Set model weights
+W = tf.Variable(tf.zeros([784, 10]))
+b = tf.Variable(tf.zeros([10]))
+
+# Construct model
+activation = tf.nn.softmax(tf.matmul(x, W) + b) # Softmax
+
+# Minimize error using cross entropy
+cross_entropy = y*tf.log(activation)
+cost = tf.reduce_mean\
+       (-tf.reduce_sum\
+        (cross_entropy,reduction_indices=1))
+
+optimizer = tf.train.\
+            GradientDescentOptimizer(learning_rate).minimize(cost)
+
+#Plot settings
+avg_set = []
+epoch_set=[]
+
+# Initializing the variables
+init = tf.initialize_all_variables()
+
+# Launch the graph
+with tf.Session() as sess:
+    sess.run(init)
+
+    # Training cycle
+    for epoch in range(training_epochs):
+        avg_cost = 0.
+        total_batch = int(mnist.train.num_examples/batch_size)
+        # Loop over all batches
+        for i in range(total_batch):
+            batch_xs, batch_ys = \
+                      mnist.train.next_batch(batch_size)
+            # Fit training using batch data
+            sess.run(optimizer, \
+                     feed_dict={x: batch_xs, y: batch_ys})
+            # Compute average loss
+            avg_cost += sess.run(cost, \
+                                 feed_dict={x: batch_xs, \
+                                            y: batch_ys})/total_batch
+        # Display logs per epoch step
+        if epoch % display_step == 0:
+            print "Epoch:", '%04d' % (epoch+1), "cost=", "{:.9f}".format(avg_cost)
+        avg_set.append(avg_cost)
+        epoch_set.append(epoch+1)
+    print "Training phase finished"
+
+
+    # Test model
+    correct_prediction = tf.equal(tf.argmax(activation, 1), tf.argmax(y, 1))
+    # Calculate accuracy
+    accuracy = tf.reduce_mean(tf.cast(correct_prediction, "float"))
+    print "Model accuracy:", accuracy.eval({x: mnist.test.images, y: mnist.test.labels})
+
+
+    plt.plot(epoch_set,avg_set, 'o', label='Logistic Regression Training phase')
+    plt.ylabel('cost')
+    plt.xlabel('epoch')
+    plt.legend()
+    plt.show()
+    
+```
+
+### 多層感知器
+
+```
+import tensorflow as tf
+import matplotlib.pyplot as plt
+
+# Import MINST data
+from tensorflow.examples.tutorials.mnist import input_data
+mnist = input_data.read_data_sets("/tmp/data/", one_hot=True)
+
+
+# Parameters
+learning_rate = 0.001
+training_epochs = 20
+batch_size = 100
+display_step = 1
+
+# Network Parameters
+n_hidden_1 = 256 # 1st layer num features
+n_hidden_2 = 256 # 2nd layer num features
+n_input = 784 # MNIST data input (img shape: 28*28)
+n_classes = 10 # MNIST total classes (0-9 digits)
+
+# tf Graph input
+x = tf.placeholder("float", [None, n_input])
+y = tf.placeholder("float", [None, n_classes])
+
+#weights layer 1
+h = tf.Variable(tf.random_normal([n_input, n_hidden_1]))
+#bias layer 1
+bias_layer_1 = tf.Variable(tf.random_normal([n_hidden_1]))
+#layer 1
+layer_1 = tf.nn.sigmoid(tf.add(tf.matmul(x,h),bias_layer_1))
+
+#weights layer 2
+w = tf.Variable(tf.random_normal([n_hidden_1, n_hidden_2]))
+#bias layer 2
+bias_layer_2 = tf.Variable(tf.random_normal([n_hidden_2]))
+#layer 2
+layer_2 = tf.nn.sigmoid(tf.add(tf.matmul(layer_1,w),bias_layer_2))
+
+#weights output layer
+output = tf.Variable(tf.random_normal([n_hidden_2, n_classes]))
+#biar output layer
+bias_output = tf.Variable(tf.random_normal([n_classes]))
+#output layer
+output_layer = tf.matmul(layer_2, output) + bias_output
+
+# cost function
+cost = tf.reduce_mean(tf.nn.softmax_cross_entropy_with_logits(logits=output_layer, labels=y))
+# optimizer
+optimizer = tf.train.AdamOptimizer(learning_rate=learning_rate).minimize(cost)
+#optimizer = tf.train.GradientDescentOptimizer(learning_rate=learning_rate).minimize(cost)
+
+
+#Plot settings
+avg_set = []
+epoch_set=[]
+
+# Initializing the variables
+init = tf.initialize_all_variables()
+
+# Launch the graph
+with tf.Session() as sess:
+    sess.run(init)
+
+    # Training cycle
+    for epoch in range(training_epochs):
+        avg_cost = 0.
+        total_batch = int(mnist.train.num_examples/batch_size)
+        # Loop over all batches
+        for i in range(total_batch):
+            batch_xs, batch_ys = mnist.train.next_batch(batch_size)
+            # Fit training using batch data
+            sess.run(optimizer, feed_dict={x: batch_xs, y: batch_ys})
+            # Compute average loss
+            avg_cost += sess.run(cost, feed_dict={x: batch_xs, y: batch_ys})/total_batch
+        # Display logs per epoch step
+        if epoch % display_step == 0:
+            print "Epoch:", '%04d' % (epoch+1), "cost=", "{:.9f}".format(avg_cost)
+        avg_set.append(avg_cost)
+        epoch_set.append(epoch+1)
+    print "Training phase finished"
+
+    # Test model
+    correct_prediction = tf.equal(tf.argmax(output_layer, 1), tf.argmax(y, 1))
+    # Calculate accuracy
+    accuracy = tf.reduce_mean(tf.cast(correct_prediction, "float"))
+    print "Model Accuracy:", accuracy.eval({x: mnist.test.images, y: mnist.test.labels})
+
+    plt.plot(epoch_set,avg_set, 'o', label='MLP Training phase')
+    plt.ylabel('cost')
+    plt.xlabel('epoch')
+    plt.legend()
+    plt.show()
 
 ```
 
 
-```
+
+### 多層感知器及其應用案例:函數近似（function approximation）
+
+
 
 
 ```
+import tensorflow as tf
+import numpy as np
+import math, random
+import matplotlib.pyplot as plt
 
+np.random.seed(1000)
+function_to_learn = lambda x: np.cos(x) + 0.1*np.random.randn(*x.shape)
+layer_1_neurons = 10
+NUM_points = 1000
+#TRAIN_SPLIT = .8
+batch_size = 100
+NUM_EPOCHS = 1500
+
+all_x = np.float32(np.random.uniform(-2*math.pi, 2*math.pi, (1, NUM_points))).T
+np.random.shuffle(all_x)
+
+train_size = int(900)
+#the first 700 points are in the training set
+x_training = all_x[:train_size]
+y_training = function_to_learn(x_training)
+
+#the last 300 are in the validation set
+x_validation = all_x[train_size:]
+y_validation = function_to_learn(x_validation)
+
+plt.figure(1)
+plt.scatter(x_training, y_training, c='green', label='train')
+plt.scatter(x_validation, y_validation, c='red', label='validation')
+plt.legend()
+plt.show(block=False)
+plt.clf()
+plt.cla()
+
+X = tf.placeholder(tf.float32, [None, 1], name="X")
+Y = tf.placeholder(tf.float32, [None, 1], name="Y")
+
+#first layer
+#Number of neurons = 10
+w_h = tf.Variable(tf.random_uniform([1, layer_1_neurons],\
+                                    minval=-1, maxval=1, dtype=tf.float32))
+b_h = tf.Variable(tf.zeros([1, layer_1_neurons], dtype=tf.float32))
+h = tf.nn.sigmoid(tf.matmul(X, w_h) + b_h)
+
+#output layer
+#Number of neurons = 10
+w_o = tf.Variable(tf.random_uniform([layer_1_neurons, 1],\
+                                    minval=-1, maxval=1, dtype=tf.float32))
+b_o = tf.Variable(tf.zeros([1, 1], dtype=tf.float32))
+
+#build the model
+model = tf.matmul(h, w_o) + b_o
+
+#minimize the cost function (model - Y)
+train_op = tf.train.AdamOptimizer().minimize(tf.nn.l2_loss(model - Y))
+
+#Start the Learning phase
+sess = tf.Session()
+sess.run(tf.initialize_all_variables())
+
+errors = []
+for i in range(NUM_EPOCHS):
+    for start, end in zip(range(0, len(x_training), batch_size),\
+                          range(batch_size, len(x_training), batch_size)):
+        sess.run(train_op, feed_dict={X: x_training[start:end],\
+                                      Y: y_training[start:end]})
+    cost = sess.run(tf.nn.l2_loss(model - y_validation),\
+                    feed_dict={X:x_validation})
+    errors.append(cost)
+    if i%100 == 0: print "epoch %d, cost = %g" % (i, cost)
+
+plt.plot(errors,label='MLP Function Approximation')
+plt.xlabel('epochs')
+plt.ylabel('cost')
+plt.legend()
+plt.show()
 
 ```
 
-```
-Chapter 4 類神經網路簡介
-什麼是類神經網路？
-單層感知器及其應用案例:邏輯斯迴歸（logistic regression） 
-多層感知器及其應用案例:函數近似（function approximation）
 
-Chapter 5 深度學習
+## Chapter 5 深度學習
+
 深度學習技術 | 卷積神經網路CNN  CNN架構  CNN的TensorFlow實作
 遞迴神經網路RNN  RNN架構  LSTM網路  使用TensorFlow進行自然語言處理
+
+
+
+```
+
+
+```
+
+
+
+```
+
+
+```
+
+
+
+```
 
 Chapter 6 GPU程式設計和TensorFlow服務
 GPU程式設計 TensorFlow服務（TensorFlow Serving）
