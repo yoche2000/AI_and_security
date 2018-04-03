@@ -2,7 +2,7 @@
 
 使用套件
 >* matplotlib
->* 
+>* Seaborn
 >* 
 ```
 畫底下圖形:
@@ -114,39 +114,133 @@ normal_samples = np.random.normal(size = 100000) # 生成 100000 組標準常態
 plt.hist(normal_samples)
 plt.savefig(filename = "my_hist.png", format = "png")
 ```
+## Seaborn
+
+https://github.com/yaojenkuo/learn_python_for_a_r_user/blob/master/day19.md
+
+Seaborn 套件在我們的開發環境沒有安裝，但我們可以透過 conda 指令在終端機安裝。
+
+$ conda install -c anaconda seaborn=0.7.1
+
+我們的開發環境是 Jupyter Notebook，這個指令可以讓圖形不會在新視窗呈現。
+
+%matplotlib inline
+
+### 直方圖（Histogram）:使用 seaborn 套件的 distplot() 方法
+```
+%matplotlib inline
+
+import seaborn as sns
+import numpy as np
+import matplotlib.pyplot as plt
+
+normal_samples = np.random.normal(size = 100000) 
+# 生成 100000 組標準常態分配（平均值為 0，標準差為 1 的常態分配）隨機變數
+
+sns.distplot(normal_samples)
+
+# 預設會附上 **kernel density estimate（KDE）**曲線
+```
 
 
-### 
+### 散佈圖（Scatter plot）:使用 seaborn 套件的 joinplot() 方法
+```
+%matplotlib inline
+
+import seaborn as sns
+import pandas as pd
+import matplotlib.pyplot as plt
+
+speed = [4, 4, 7, 7, 8, 9, 10, 10, 10, 11, 11, 12, 12, 12, 12, 13, 13, 13, 13, 14, 14, 14, 14, 15, 15, 15, 16, 16, 17, 17, 17, 18, 18, 18, 18, 19, 19, 19, 20, 20, 20, 20, 20, 22, 23, 24, 24, 24, 24, 25]
+dist = [2, 10, 4, 22, 16, 10, 18, 26, 34, 17, 28, 14, 20, 24, 28, 26, 34, 34, 46, 26, 36, 60, 80, 20, 26, 54, 32, 40, 32, 40, 50, 42, 56, 76, 84, 36, 46, 68, 32, 48, 52, 56, 64, 66, 54, 70, 92, 93, 120, 85]
+
+cars_df = pd.DataFrame(
+    {"speed": speed,
+     "dist": dist
+    }
+)
+
+sns.jointplot(x = "speed", y = "dist", data = cars_df)
+```
+
+
+### 線圖（Line plot）:使用 seaborn 套件的 factorplot() 方法
+```
+%matplotlib inline
+
+import seaborn as sns
+import pandas as pd
+import matplotlib.pyplot as plt
+
+speed = [4, 4, 7, 7, 8, 9, 10, 10, 10, 11, 11, 12, 12, 12, 12, 13, 13, 13, 13, 14, 14, 14, 14, 15, 15, 15, 16, 16, 17, 17, 17, 18, 18, 18, 18, 19, 19, 19, 20, 20, 20, 20, 20, 22, 23, 24, 24, 24, 24, 25]
+dist = [2, 10, 4, 22, 16, 10, 18, 26, 34, 17, 28, 14, 20, 24, 28, 26, 34, 34, 46, 26, 36, 60, 80, 20, 26, 54, 32, 40, 32, 40, 50, 42, 56, 76, 84, 36, 46, 68, 32, 48, 52, 56, 64, 66, 54, 70, 92, 93, 120, 85]
+
+cars_df = pd.DataFrame(
+    {"speed": speed,
+     "dist": dist
+    }
+)
+
+sns.factorplot(data = cars_df, x="speed", y="dist", ci = None)
+```
+
+
+### 長條圖（Bar plot）:使用 seaborn 套件的 countplot() 方法
+```
+%matplotlib inline
+
+import seaborn as sns
+import pandas as pd
+import matplotlib.pyplot as plt
+
+cyl = [6 ,6 ,4 ,6 ,8 ,6 ,8 ,4 ,4 ,6 ,6 ,8 ,8 ,8 ,8 ,8 ,8 ,4 ,4 ,4 ,4 ,8 ,8 ,8 ,8 ,4 ,4 ,4 ,8 ,6 ,8 ,4]
+cyl_df = pd.DataFrame({"cyl": cyl})
+
+sns.countplot(x = "cyl", data=cyl_df)
+```
+
+
+### 盒鬚圖（Box plot）:使用 seaborn 套件的 boxplot() 方法
+```
+%matplotlib inline
+
+import seaborn as sns
+import numpy as np
+import matplotlib.pyplot as plt
+
+normal_samples = np.random.normal(size = 100000) # 生成 100000 組標準常態分配（平均值為 0，標準差為 1 的常態分配）隨機變數
+sns.boxplot(normal_samples)
+```
+
+## Bokeh
+
+https://github.com/yaojenkuo/learn_python_for_a_r_user/blob/master/day20.md
+
+### 直方圖（Histogram）
 ```
 
 ```
 
 
-### 
+### 散佈圖（Scatter plot）
 ```
 
 ```
 
 
-### 
+### 線圖（Line plot）
 ```
 
 ```
 
 
-### 
+### 長條圖（Bar plot）
 ```
 
 ```
 
 
-### 
-```
-
-```
-
-
-### 
+### 盒鬚圖（Box plot）
 ```
 
 ```
