@@ -62,6 +62,8 @@ https://ljalphabeta.gitbooks.io/python-/content/sklearn.html
 Python機器學習Python Machine Learning
 作者： Sebastian Raschka  譯者： 劉立民, 吳建華
 出版社：博碩  出版日期：2016/09/15
+https://github.com/rasbt/python-machine-learning-book
+https://github.com/rasbt/python-machine-learning-book-2nd-edition
 
 •01 賦予電腦從數據中學習的能力
 •02 訓練機器學習的分類演算法
