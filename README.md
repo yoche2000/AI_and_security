@@ -22,10 +22,25 @@ NumPy (Numerical Python)
 ```
 ## Python machine learning:scikit-learn
 ```
+Machine Learning
+10-601, Spring 2015
+Carnegie Mellon University
+Tom Mitchell and Maria-Florina Balcan 
+http://www.cs.cmu.edu/~ninamf/courses/601sp15/lectures.shtml
+
+Python Machine Learning, 2nd Ed.
+published September 20th, 2017  Paperback: 622 pages  Publisher: Packt Publishing
+ISBN-10: 1787125939  ISBN-13: 978-1787125933  Kindle ASIN: B0742K7HYF
+https://github.com/rasbt/python-machine-learning-book-2nd-edition
+
+https://github.com/rasbt/python-machine-learning-book
+
 機器學習：使用Python
 https://machine-learning-python.kspax.io/
 
 scikit-learn==> http://scikit-learn.org/
+
+
 
 
 •01 賦予電腦從數據中學習的能力
@@ -43,6 +58,20 @@ scikit-learn==> http://scikit-learn.org/
 •13 以 Theano 平行化地訓練類神經網路
 ```
 ## Python Deep learning
+
+
+```
+https://github.com/PacktPublishing/Python-Deep-Learning-Cookbook
+
+https://github.com/neelabhpant/Deep-Learning-in-Python
+
+Deep Learning with Python
+François Chollet
+November 2017  ISBN 9781617294433  384 pages  printed in black & white
+https://github.com/fchollet/deep-learning-with-python-notebooks
+```
+
+
 ```
 Deep Learning：用Python進行深度學習的基礎理論實作
 作者： 斎藤康毅  譯者： 吳嘉芳
@@ -88,9 +117,15 @@ GPU程式設計 TensorFlow服務（TensorFlow Serving）
 ```
 ```
 Python深度學習Python Deep Learning
-作者： Valentino Zocca, Gianmario Spacagna, Daniel Slater  
+作者： Valentino Zocca, Gianmario Spacagna, Daniel Slater
 譯者： 劉立民, 吳建華, 陳開煇 編者： Peter Roelants
 出版社：博碩  出版日期：2018/01/05
+https://github.com/PacktPublishing/Python-Deep-Learning
+
+系統安裝anaconda
+將下載的程式碼解到D:\Python-Deep-Learning
+cd Python-Deep-Learning
+在此目錄執行jupyter notebook
 
 第1章：機器學習簡介
 什麼是「機器學習」？|不同的「機器學習」方法
