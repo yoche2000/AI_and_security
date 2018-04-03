@@ -151,6 +151,7 @@ https://github.com/Kulbear/deep-learning-coursera
 ```
 ```
 Deep Learning：用Python進行深度學習的基礎理論實作
+https://github.com/oreilly-japan/deep-learning-from-scratch
 作者： 斎藤康毅  譯者： 吳嘉芳
 出版社：歐萊禮  出版日期：2017/08/17
 第一章 Python入門   第二章 感知器 
