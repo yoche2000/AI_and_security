@@ -16,7 +16,7 @@
 
 https://github.com/yaojenkuo/learn_python_for_a_r_user/blob/master/day18.md
 
-### 直方圖（Histogram）
+### 直方圖（Histogram）:使用 matplotlib.pyplot 的 hist() 方法
 ```
 %matplotlib inline
 
@@ -37,7 +37,7 @@ plt.show()
 ```
 
 
-### 散佈圖（Scatter plot）
+### 散佈圖（Scatter plot）:使用 matplotlib.pyplot 的 scatter() 方法
 ```
 %matplotlib inline
 
@@ -52,7 +52,7 @@ plt.show()
 ```
 
 
-### 線圖（Line plot）
+### 線圖（Line plot）:使用 matplotlib.pyplot 的 plot() 方法
 ```
 %matplotlib inline
 
@@ -67,10 +67,8 @@ plt.show()
 ```
 
 
-### 長條圖（Bar plot）
+### 長條圖（Bar plot）:使用 matplotlib.pyplot 的 bar() 方法
 ```
-# 使用 matplotlib.pyplot 的 bar() 方法。
-
 %matplotlib inline
 
 from collections import Counter
@@ -88,10 +86,8 @@ plt.show()
 ```
 
 
-### 盒鬚圖（Box plot）
+### 盒鬚圖（Box plot）:使用 matplotlib.pyplot 的 boxplot() 方法
 ```
-# 使用 matplotlib.pyplot 的 boxplot() 方法。
-
 %matplotlib inline
 
 import numpy as np
