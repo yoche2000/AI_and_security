@@ -133,6 +133,7 @@ Introduction to Deep Learning by Prof. Bhiksha Raj (2017)
 ```
 ```
 Hands-On Machine Learning with Scikit-Learn and TensorFlow
+https://github.com/ageron/handson-ml
 https://github.com/bjpcjp/scikit-and-tensorflow-workbooks
 
 ```
