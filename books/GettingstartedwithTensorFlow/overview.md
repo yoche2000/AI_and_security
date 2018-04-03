@@ -3,18 +3,20 @@
 <<深度學習快速入門：使用TensorFlow>>
 作者： Giancarlo Zaccone  譯者： 傅運文
 出版社：博碩  出版日期：2017/01/11
+https://github.com/PacktPublishing/Getting-Started-with-TensorFlow
 ```
-TensorFlow環境安裝
-
-
+### Chapter 1 TensorFlow：基本概念
 ```
-Chapter 1 TensorFlow：基本概念
 機器學習與深度學習的基礎
 TensorFlow：總體概述
 Python的基礎
 安裝TensorFlow
 第一次實地操作 資料流圖形
 TensorFlow程式設計模型 如何使用TensorBoard
+
+TensorFlow環境安裝
+Versions of TensorFlow:https://www.tensorflow.org/versions/
+https://github.com/tensorflow/tensorflow
 ```
 ```
 #first_session.py
@@ -229,6 +231,9 @@ with tf.Session() as sess:
     print sess.run(x)
 ```
 ## 複數及碎形（fractals）  
+
+Mandelbrot Set:https://www.tensorflow.org/tutorials/mandelbrot
+
 ```
 #Import libraries for simulation
 import tensorflow as tf
