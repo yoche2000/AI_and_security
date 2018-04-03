@@ -28,6 +28,17 @@
   AI approach to malware similarity analysis: Maping the malware genome with a deep neural network
   https://www.slideshare.net/cisoplatform7/ai-approach-to-malware-similarity-analysis-maping-the-malware-genome-with-a-deep-neural-network
 
+
+Ensembled Based Categorization and Adaptive Learning Model for Malware Detection	https://www.slideshare.net/mnajem/ias-2011najmi
+
+Malware Detection With Multiple Features
+https://www.slideshare.net/mnajem/malware-detection-with-multiple-features
+
+Dytan: A Generic Dynamic Taint Analysis Framework (ISSTA 2007) https://www.slideshare.net/jimclause/penumbra-automatically-identifying-failurerelevant-inputs-issta-2007
+
+Control Flow Analysis	
+https://www.slideshare.net/embarbosa/control-flow-analysis
+
+Malware Detection Using Machine Learning Techniqueshttps://www.slideshare.net/ArshadRaja786/malware-detection-using-machine-learning-techniques
+
 ```
-  
- 
