@@ -294,11 +294,243 @@ with tf.Session() as sess:
     var_grad_val = sess.run(var_grad, feed_dict={data: 4})
     print(var_grad_val)
 ```
+### monte carlo method
+```
+import tensorflow as tf
+
+trials = 100
+hits = 0
+x = tf.random_uniform([1],minval=0,maxval=1,dtype=tf.float32)
+y = tf.random_uniform([1],minval=0,maxval=1,dtype=tf.float32)
+
+sess = tf.Session()
+with sess.as_default():
+    for i in range(1,trials):
+        for j in range(1,trials):
+            if x.eval()**2 + y.eval()**2 < 1 :
+                hits = hits + 1
+        print (4 * float(hits) / i)/trials
+```
+
+### random number亂數產生
 
 ```
-Chapter 3 機器學習簡介與應用
+import tensorflow as tf
+import matplotlib.pyplot as plt
+#import matplotlib
+
+# Create a tensor of shape [100] consisting of random normal values, with mean
+# 0 and standard deviation 2.
+norm = tf.random_normal([100], mean=0, stddev=2)
+with tf.Session() as session:
+    plt.hist(norm.eval(),normed=True)
+    plt.show()
+
+
+uniform = tf.random_uniform([100],minval=0,maxval=1,dtype=tf.float32)
+with tf.Session() as session:
+    print uniform.eval()
+    plt.hist(uniform.eval(),normed=True)
+    plt.show()
+
+
+uniform_with_seed = tf.random_uniform([1], seed=1)
+uniform_without_seed = tf.random_uniform([1])
+
+# Repeatedly running this block with the same graph will generate the same
+# sequence of values for 'a', but different sequences of values for 'b'.
+print("First Run")
+with tf.Session() as first_session:
+  print("uniform with (seed = 1) = {}"\
+        .format(first_session.run(uniform_with_seed)))
+  print("uniform with (seed = 1) = {}"\
+        .format(first_session.run(uniform_with_seed)))
+  print("uniform without seed = {}"\
+        .format(first_session.run(uniform_without_seed)))
+  print("uniform without seed = {}"\
+        .format(first_session.run(uniform_without_seed)))
+
+print("Second Run")
+with tf.Session() as second_session:
+  print("uniform with (seed = 1) = {}"\
+        .format(second_session.run(uniform_with_seed)))
+  print("uniform with (seed = 1) = {}"\
+        .format(second_session.run(uniform_with_seed)))
+  print("uniform without seed = {}"\
+        .format(second_session.run(uniform_without_seed)))
+  print("uniform without seed = {}"\
+        .format(second_session.run(uniform_without_seed)))
+
+
+
+import tensorflow as tf
+
+trials = 100
+hits = 0
+x = tf.random_uniform([1],minval=-1,maxval=1,dtype=tf.float32)
+y = tf.random_uniform([1],minval=-1,maxval=1,dtype=tf.float32)
+pi = []
+sess = tf.Session()
+with sess.as_default():
+    for i in range(1,trials):
+        for j in range(1,trials):
+            if x.eval()**2 + y.eval()**2 < 1 :
+                hits = hits + 1
+                pi.append((4 * float(hits) / i)/trials)
+
+plt.plot(pi)
+plt.show()
+```
+
+
+
+### partial differential equation(略)
+
+
+
+## Chapter 3 機器學習簡介與應用
+
 線性迴歸演算法   分類（Classifiers）  資料群集（Data clustering）
 
+```
+import input_data
+import numpy as np
+import matplotlib.pyplot as plt
+
+#Using input_data we load the data sets :
+
+mnist_images = input_data.read_data_sets\
+               ("MNIST_data/",\
+                one_hot=False)
+
+train.next_batch(10) returns the first 10 images :
+pixels,real_values = mnist_images.train.next_batch(10)
+
+#it also returns two lists, the matrix of the pixels loaded, and the list that contains the real values loaded:
+
+print "list of values loaded ",real_values
+example_to_visualize = 5
+print "element N?" + str(example_to_visualize + 1)\
+                    + " of the list plotted"
+
+```
+## KMeans 
+```
+K-Means 是 J. B. MacQueen 於1967年所提出的分群演算法
+必須事前設定群集的數量 k，然後找尋下列公式的極大值，以達到分群的最佳化之目的
+
+```
+### 演算法
+```
+
+1. 隨機指派群集中心：
+    在訓練組資料中「隨機」找出K筆紀錄來作為初始種子(初始群集的中心)
+2. 產生初始群集：
+    計算每一筆紀錄到各個隨機種子之間的距離，然後比較該筆紀錄究竟離哪一個隨機種子最近，
+    然後這筆紀錄就會被指派到最接近的那個群集中心，此時就會形成一個群集邊界，
+    產生了初始群集的成員集合
+3. 產生新的質量中心：
+    根據邊界內的每一個案例重新計算出該群集的質量中心，
+    利用新的質量中心取代之前的隨機種子，來做為該群的中心
+4. 變動群集邊界：
+    指定完新的質量中心之後，再一次比較每一筆紀錄與新的群集中心之間的距離，
+    然後根據距離，再度重新分配每一個案例所屬的群集
+
+5. 持續反覆 3, 4 的步驟，一直執行到群集成員不再變動為止
+```
+### 演算法實作
+```
+from __future__ import print_function
+
+import numpy as np
+import tensorflow as tf
+from tensorflow.contrib.factorization import KMeans
+
+# Ignore all GPUs, tf random forest does not benefit from it.
+import os
+os.environ["CUDA_VISIBLE_DEVICES"] = ""
+
+# Import MNIST data
+from tensorflow.examples.tutorials.mnist import input_data
+mnist = input_data.read_data_sets("/tmp/data/", one_hot=True)
+full_data_x = mnist.train.images
+
+# Parameters
+num_steps = 50 # Total steps to train
+batch_size = 1024 # The number of samples per batch
+k = 25 # The number of clusters
+num_classes = 10 # The 10 digits
+num_features = 784 # Each image is 28x28 pixels
+
+# Input images
+X = tf.placeholder(tf.float32, shape=[None, num_features])
+# Labels (for assigning a label to a centroid and testing)
+Y = tf.placeholder(tf.float32, shape=[None, num_classes])
+
+# K-Means Parameters
+kmeans = KMeans(inputs=X, num_clusters=k, distance_metric='cosine',
+                use_mini_batch=True)
+
+# Build KMeans graph
+(all_scores, cluster_idx, scores, cluster_centers_initialized, init_op,
+train_op) = kmeans.training_graph()
+cluster_idx = cluster_idx[0] # fix for cluster_idx being a tuple
+avg_distance = tf.reduce_mean(scores)
+
+# Initialize the variables (i.e. assign their default value)
+init_vars = tf.global_variables_initializer()
+
+# Start TensorFlow session
+sess = tf.Session()
+
+# Run the initializer
+sess.run(init_vars, feed_dict={X: full_data_x})
+sess.run(init_op, feed_dict={X: full_data_x})
+
+# Training
+for i in range(1, num_steps + 1):
+    _, d, idx = sess.run([train_op, avg_distance, cluster_idx],
+                         feed_dict={X: full_data_x})
+    if i % 10 == 0 or i == 1:
+        print("Step %i, Avg Distance: %f" % (i, d))
+
+# Assign a label to each centroid
+# Count total number of labels per centroid, using the label of each training
+# sample to their closest centroid (given by 'idx')
+counts = np.zeros(shape=(k, num_classes))
+for i in range(len(idx)):
+    counts[idx[i]] += mnist.train.labels[i]
+# Assign the most frequent label to the centroid
+labels_map = [np.argmax(c) for c in counts]
+labels_map = tf.convert_to_tensor(labels_map)
+
+# Evaluation ops
+# Lookup: centroid_id -> label
+cluster_label = tf.nn.embedding_lookup(labels_map, cluster_idx)
+# Compute accuracy
+correct_prediction = tf.equal(cluster_label, tf.cast(tf.argmax(Y, 1), tf.int32))
+accuracy_op = tf.reduce_mean(tf.cast(correct_prediction, tf.float32))
+
+# Test Model
+test_x, test_y = mnist.test.images, mnist.test.labels
+print("Test Accuracy:", sess.run(accuracy_op, feed_dict={X: test_x, Y: test_y}))
+
+```
+
+
+
+```
+
+
+```
+
+
+```
+
+
+```
+
+```
 Chapter 4 類神經網路簡介
 什麼是類神經網路？
 單層感知器及其應用案例:邏輯斯迴歸（logistic regression） 
