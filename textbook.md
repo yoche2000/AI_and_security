@@ -42,6 +42,14 @@ https://github.com/nfmcclure/tensorflow_cookbook
 
 https://github.com/MorvanZhou/Reinforcement-learning-with-tensorflow
 
+Building Machine Learning Projects with TensorFlow
+Rodolfo Bonnin November 2016
+https://github.com/PacktPublishing/Building-Machine-Learning-Projects-with-TensorFlow
+
+Python Machine Learning Blueprints: Intuitive data projects you can relate to
+Alexander T. Combs July 2016
+https://github.com/PacktPublishing/Python-Machine-Learning-Blueprints
+
 機器學習：使用Python
 https://machine-learning-python.kspax.io/
 
@@ -71,6 +79,11 @@ Python機器學習Python Machine Learning
 ```
 ## Python Deep learning
 ```
+https://github.com/ChristosChristofidis/awesome-deep-learning
+
+30 Amazing Machine Learning Projects for the Past Year (v.2018)
+https://medium.mybridge.co/30-amazing-machine-learning-projects-for-the-past-year-v-2018-b853b8621ac7
+
 https://github.com/the-deep-learners/TensorFlow-LiveLessons
 https://github.com/thrillerist/TensorFlow-Tutorials
 https://github.com/Hvass-Labs/TensorFlow-Tutorials
