@@ -3,7 +3,7 @@
 使用套件
 >* matplotlib
 >* Seaborn
->* 
+>* Bokeh
 ```
 畫底下圖形:
 直方圖（Histogram）
