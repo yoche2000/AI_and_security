@@ -18,7 +18,10 @@ https://www.machinelearningplus.com/python/101-numpy-exercises-python/
 
 
 NumPy (Numerical Python)
-
+Data Science from Scratch:First Principles with Python
+By Joel Grus
+Publisher: O'Reilly Media  Release Date: April 2015
+https://github.com/joelgrus/data-science-from-scratch
 Data Science from Scratch：用Python學資料科學
 第1章 簡介  第2章 Python速成班  第3章 數據視覺化
 第4章 線性代數  第5章 統計學  第6章 機率  第7章 假設與推論
