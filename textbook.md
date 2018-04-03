@@ -49,6 +49,9 @@ Building Machine Learning Projects with TensorFlow
 Rodolfo Bonnin November 2016
 https://github.com/PacktPublishing/Building-Machine-Learning-Projects-with-TensorFlow
 
+Practical Machine Learning with Python
+https://github.com/dipanjanS/practical-machine-learning-with-python
+
 Python Machine Learning Blueprints: Intuitive data projects you can relate to
 Alexander T. Combs July 2016
 https://github.com/PacktPublishing/Python-Machine-Learning-Blueprints
@@ -83,7 +86,14 @@ https://github.com/rasbt/python-machine-learning-book-2nd-edition
 •13 以 Theano 平行化地訓練類神經網路
 ```
 ## Python Deep learning
+
 ```
+Ian Goodfellow 的《Deep Learning》
+作者在 Google Brain 和 OpenAI 上做出了突出貢獻。不少人認為這本書是深度學習領域的聖經，
+它是迄今為止唯一一本融合了前幾十年研究工作的鴻篇巨著。
+大量的數學
+https://github.com/Kulbear/deep-learning-coursera
+
 https://github.com/ChristosChristofidis/awesome-deep-learning
 
 30 Amazing Machine Learning Projects for the Past Year (v.2018)
