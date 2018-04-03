@@ -116,6 +116,7 @@ Deep Learning：用Python進行深度學習的基礎理論實作
 Getting started with TensorFlow<<深度學習快速入門：使用TensorFlow>>
 作者： Giancarlo Zaccone  譯者： 傅運文
 出版社：博碩  出版日期：2017/01/11
+https://github.com/PacktPublishing/Getting-Started-with-TensorFlow
 
 Chapter 1 TensorFlow：基本概念
 機器學習與深度學習的基礎
