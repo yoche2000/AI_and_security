@@ -1,6 +1,23 @@
 
  # malware detection
  
+ 
+
+ 
+ 
+  
+  http://www.covert.io/deep-learning-security-papers/
+
+  
+ 
+ 
+  
+  https://www.blackhat.com/docs/us-15/materials/us-15-Wang-The-Applications-Of-Deep-Learning-On-Traffic-Identification.pdf
+
+  
+ 
+
+ 
   ```
   Data mining techniques for malware detection.pptx
   https://www.slideshare.net/Aditya3780/data-mining-techniques-for-malware-detectionpptx
