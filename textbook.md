@@ -85,15 +85,18 @@ https://github.com/rasbt/python-machine-learning-book-2nd-edition
 •12 訓練類神經網路來做圖形識別
 •13 以 Theano 平行化地訓練類神經網路
 ```
-## Python Deep learning
-
+## Deep learning
 ```
 Ian Goodfellow 的《Deep Learning》
 作者在 Google Brain 和 OpenAI 上做出了突出貢獻。不少人認為這本書是深度學習領域的聖經，
 它是迄今為止唯一一本融合了前幾十年研究工作的鴻篇巨著。
 大量的數學
 https://github.com/Kulbear/deep-learning-coursera
+http://www.deeplearningbook.org/lecture_slides.html
+```
+## Python Deep learning
 
+```
 https://github.com/ChristosChristofidis/awesome-deep-learning
 
 30 Amazing Machine Learning Projects for the Past Year (v.2018)
