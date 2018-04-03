@@ -15,6 +15,7 @@ Big data, big challenge－ splunk 幫你解決 big data 議題帶來的挑戰
 https://www.slideshare.net/wiselytao/big-data-big-challenge-splunk-big-data-36182435
 ```
 ```
+陳仲寬
 Malware collection and analysis
 https://www.slideshare.net/Bletchley131/malware-collection
 
