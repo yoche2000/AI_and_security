@@ -191,15 +191,111 @@ log_writer.add_summary(image_summary, i)
 log_writer.close()
 ```
 
-```
-
-```
-
 
 # Chapter 2 用TensorFlow求解數學問題
 ```
 張量資料結構  複數及碎形（fractals）  計算梯度（gradient） 隨機數值
+```
+## 張量資料結構
+```
+import numpy as np
 
+tensor_1d = np.array([1.3,1,4.0,23.99])
+
+print tensor_1d
+
+print tensor_1d[0]
+
+print tensor_1d[2]
+
+import tensorflow as tf
+
+tf_tensor = tf.convert_to_tensor(tensor_1d, dtype=tf.float64)
+
+with tf.Session() as sess:
+    print sess.run(tf_tensor)
+    print sess.run(tf_tensor[0])
+    print sess.run(tf_tensor[2])
+
+
+tensor_2d=np.array([(1,2,3,4),(4,5,6,7),(8,9,10,11),(12,13,14,15)])
+
+print tensor_2d
+print tensor_2d[3][3]
+print tensor_2d[0:2,0:2]
+
+tf_tensor=tf.placeholder("float64",tensor_2d,name='x')
+with tf.Session() as sess:
+    print sess.run(x)
+```
+## 複數及碎形（fractals）  
+```
+#Import libraries for simulation
+import tensorflow as tf
+import numpy as np
+import matplotlib.pyplot as plt
+     
+
+
+
+#MANDELBROT SET
+Y, X = np.mgrid[-1.3:1.3:0.005, -2:1:0.005]
+
+#JULIA SET
+#Y, X = np.mgrid[-2:2:0.005, -2:2:0.005]
+
+#Definiamo il punto corrente 
+Z = X+1j*Y
+c = tf.constant(Z.astype("complex64"))
+
+zs = tf.Variable(c)
+ns = tf.Variable(tf.zeros_like(c, "float32"))
+
+#c = complex(0.0,0.75)
+#c = complex(-1.5,-1.5)
+sess = tf.InteractiveSession()
+tf.initialize_all_variables().run()
+
+# Compute the new values of z: z^2 + x
+zs_ = zs*zs + c
+#zs_ = zs*zs - c
+
+# Have we diverged with this new value?
+not_diverged = tf.complex_abs(zs_) < 4
+
+step = tf.group(
+  zs.assign(zs_),
+  ns.assign_add(tf.cast(not_diverged, "float32"))
+  )
+
+for i in range(200): step.run()
+
+plt.imshow(ns.eval())
+plt.show()
+
+```
+## 計算梯度（gradient） 隨機數值
+```
+import tensorflow as tf
+
+def my_loss_function(var, data):
+    return tf.abs(tf.subtract(var, data))
+
+def my_other_loss_function(var, data):
+    return tf.square(tf.subtract(var, data))
+
+data = tf.placeholder(tf.float32)
+var = tf.Variable(1.)
+loss = my_loss_function(var, data)
+var_grad = tf.gradients(loss, [var])[0]
+
+with tf.Session() as sess:
+    sess.run(tf.global_variables_initializer())
+    var_grad_val = sess.run(var_grad, feed_dict={data: 4})
+    print(var_grad_val)
+```
+
+```
 Chapter 3 機器學習簡介與應用
 線性迴歸演算法   分類（Classifiers）  資料群集（Data clustering）
 
