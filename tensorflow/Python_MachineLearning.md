@@ -31,9 +31,17 @@ iris_df.head() # 觀察前五個觀測值
 
 ```
 波士頓房地產資料可以透過 load_boston() 方法讀入
-
 糖尿病病患資料可以透過 load_diabetes() 方法讀入
+scikit-learn comes with a few small standard datasets that 
+do not require to download any file from some external website.
 
+load_boston([return_X_y])	Load and return the boston house-prices dataset (regression).
+load_iris([return_X_y])	Load and return the iris dataset (classification).
+load_diabetes([return_X_y])	Load and return the diabetes dataset (regression).
+load_digits([n_class, return_X_y])	Load and return the digits dataset (classification).
+load_linnerud([return_X_y])	Load and return the linnerud dataset (multivariate regression).
+load_wine([return_X_y])	Load and return the wine dataset (classification).
+load_breast_cancer([return_X_y])	Load and return the breast cancer wisconsin dataset (classification).
 ```
 
 ###  建立線性迴歸分析模型:用氣溫來預測冰紅茶的銷售量
