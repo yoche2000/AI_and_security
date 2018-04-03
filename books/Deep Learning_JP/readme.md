@@ -10,6 +10,13 @@ https://github.com/oreilly-japan/deep-learning-from-scratch
 ```
 ## 第一章 Python入門
 
+### 使用Matplotlib畫圖===>資料視覺化
+
+```
+pyplot提供顯示影像用的方法imshow()
+如果要載入影像，可以利用matplotlib.image模組的 imread()
+```
+
 ```
 # coding: utf-8
 # img_show.py
@@ -183,9 +190,6 @@ if __name__ == '__main__':
 ```
 
 
-
-
-
 ## 第三章 神經網路   
 
 ```
@@ -197,12 +201,192 @@ if __name__ == '__main__':
 神經網路的研究開始復蘇。
 ```
 
+### 活化函數(activation function)
+```
+神經網路架構::輸入層==>中間層(隱藏層hidden layer)==>輸出層
+活化函數(activation function)==>以臨界值為分界來轉換輸出的函數{階梯函數step function 步階函數}
+https://en.wikipedia.org/wiki/Activation_function
+https://towardsdatascience.com/activation-functions-neural-networks-1cbd9f8d91d6
+```
+### 活化函數(activation function):step_function.py
+
+```
+# coding: utf-8
+import numpy as np
+import matplotlib.pylab as plt
+
+
+def step_function(x):
+    return np.array(x > 0, dtype=np.int)
+
+X = np.arange(-5.0, 5.0, 0.1)
+Y = step_function(X)
+plt.plot(X, Y)
+plt.ylim(-0.1, 1.1) 
+plt.show()
 
 ```
 
+### 活化函數(activation function):sigmoid
+```
+# coding: utf-8
+import numpy as np
+import matplotlib.pylab as plt
+
+
+def sigmoid(x):
+    return 1 / (1 + np.exp(-x))    
+
+X = np.arange(-5.0, 5.0, 0.1)
+Y = sigmoid(X)
+plt.plot(X, Y)
+plt.ylim(-0.1, 1.1)
+plt.show()
+
 ```
 
 
+### 活化函數(activation function)比較:比較 sigmoid 函數與階梯函數
+```
+# coding: utf-8
+import numpy as np
+import matplotlib.pylab as plt
+
+def sigmoid(x):
+    return 1 / (1 + np.exp(-x))    
+
+def step_function(x):
+    return np.array(x > 0, dtype=np.int)
+
+x = np.arange(-5.0, 5.0, 0.1)
+y1 = sigmoid(x)
+y2 = step_function(x)
+
+plt.plot(x, y1)
+plt.plot(x, y2, 'k--')
+plt.ylim(-0.1, 1.1) 
+plt.show()
+```
+
+
+### 活化函數(activation function):ReL U ( Rectified Linear Unit ） 函數
+```
+# coding: utf-8
+import numpy as np
+import matplotlib.pylab as plt
+
+
+def relu(x):
+    return np.maximum(0, x)
+
+x = np.arange(-5.0, 5.0, 0.1)
+y = relu(x)
+plt.plot(x, y)
+plt.ylim(-1.0, 5.5)
+plt.show()
+
+```
+多維陣列的運算
+矩陣的乘積
+
+
+### 輸出層的設計
+```
+神經網路可以用來解決分類問題與迴歸問題。 
+解決分類問題或迴歸問題時，必須改變輸出層的活化函數。 
+一般而言，迴歸問題要使用恆等函數， 而分類問題使用的是 softmax 函數。
+
+機器學習的問題大致可以分成 分類問題與迴歸問題 
+
+分類問題是指資料屬於哪種類別的問題 
+例如，從拍緝的人像中 ，要分類那個人是 男性還是女性，這就是分類問題。
+
+迴歸問題是從輸入資料中預測(連續性)數值的問題。
+例如，從拍攝的人像中預測那個人的體重
+
+恆等函數與 softmax 函數
+```
+
+### 分類手寫數字影像
+```
+step1:學習:使用訓練資料(學習資料)進行權重參數學習===>model
+step2:推論:使用學習完的參數(model)執行神經網路的推論。 
+神經網路的正向傳播(forward propagation)
+```
+
+#### MNIST資料集
+```
+http://yann.lecun.com/exdb/mnist/
+MNIST 的手寫數字影像集是機器學習領域中是最有名的資料集之一，
+運用於各種場合包括簡單的實驗或當作論文發表的研究。 
+
+MNIST 資料集是由 0~9 的數字影像構成
+MNIST 資料集分成三個部分
+55,000 筆的 training data (mnist.train)
+10,000 筆的 test data (mnist.test)
+5,000 筆的 validation data (mnist.validation)
+MNIST 的圖片是 28 像素 x 28 像素，每一張圖片就可以用 28 x 28 = 784 個數字來紀錄
+使用這些影像可以進行學習與推論
+在一般的 MNIST 資料集用法中，通常會使用訓練影像進行學習，再利用學習後的模型，預測能否正確分類測試影像。
+
+```
+```
+下載並熟悉 MNIST data
+https://ithelp.ithome.com.tw/articles/10186473
+
+from tensorflow.examples.tutorials.mnist import input_data
+mnist = input_data.read_data_sets("MNIST_data/", one_hot=True)
+
+# 來看看 mnist 的型態
+print type(mnist)
+print mnist.train.num_examples
+print mnist.validation.num_examples
+print mnist.test.num_examples
+
+print("讓我們看一下 MNIST 訓練還有測試的資料集長得如何")
+train_img = mnist.train.images
+train_label = mnist.train.labels
+test_img = mnist.test.images
+test_label = mnist.test.labels
+print
+print(" train_img 的 type : %s" % (type(train_img)))
+print(" train_img 的 dimension : %s" % (train_img.shape,))
+print(" train_label 的 type : %s" % (type(train_label)))
+print(" train_label 的 dimension : %s" % (train_label.shape,))
+print(" test_img 的 type : %s" % (type(test_img)))
+print(" test_img 的 dimension : %s" % (test_img.shape,))
+print(" test_label 的 type : %s" % (type(test_label)))
+print(" test_label 的 dimension : %s" % (test_label.shape,))
+
+
+每個 image 有 784 個數字，因為每張圖片其實是 28 pixels X 28 pixels，我們可以把它看成一個很大的 array
+
+tensor 形狀為 [55000, 784]
+第一個維度指的是圖片的 index
+第二個則是每個圖片的 pixel 點，這個 pixel 點是一個介於 0 到 1 的值，來表示 pixel 點的強度
+
+每個 MNIST 中的圖片都有一個對應的 label 也就是從 0 到 9 的數值．
+在這裡每個 label 都是一個 one-hot vectors． 
+one-hot vector 是指說只有一個維度是 1 其他都是 0．
+數字 n 表示一個只有在第 n 維度（從 0 開始）數字為 1 的 10 維向量．
+label 0 的表示法就是（[1, 0, 0, 0, 0, 0, 0, 0, 0, 0]．
+mnist.train.labels 是一個 [60000, 10] 的矩陣．
+
+
+trainimg = mnist.train.images
+trainlabel = mnist.train.labels
+nsample = 1
+randidx = np.random.randint(trainimg.shape[0], size=nsample)
+
+for i in [0, 1, 2]:
+    curr_img   = np.reshape(trainimg[i, :], (28, 28)) # 28 by 28 matrix 
+    curr_label = np.argmax(trainlabel[i, :] ) # Label
+    plt.matshow(curr_img, cmap=plt.get_cmap('gray'))
+    plt.title("" + str(i + 1) + "th Training Data " 
+              + "Label is " + str(curr_label))
+```
+```
+```
 ## 第四章 神經網路的學習  
 
 ## 第五章 誤差反向傳播法 
@@ -211,41 +395,7 @@ if __name__ == '__main__':
 
 ## 第七章 卷積神經網路  
 
-### ImageNet(2009)
-```
-2009年，一群在普林斯頓大學電腦系的華人學者發表了論文 
-"ImageNet: A large scale hierarchical image database)，
-宣佈建立了第一個超大型圖像資料庫，供電腦視覺研究者使用。
 
-這個資料庫建立之初，包含了三百二十萬個圖像。它的目的是要把英文裡的八萬個名詞，每個詞收集五百到一千個高清圖片，
-存放到資料庫裡。最終達到五千萬以上的圖像。
-
-2010年，以 ImageNet 為基礎的大型圖像識別競賽，
-ImageNet Large Scale Visual Recognition Challenge 2010 (ILSVRC2010) 第一次舉辦。
-ImageNet＠2010[第一屆]==>http://image-net.org/challenges/LSVRC/2010/pascal_ilsvrc.pdf
-ImageNet＠2012==>CNN:::AlexNet　計算機視覺領域取得了重大成果
-    多倫多大學的Geoffrey Hinton、Ilya Sutskever和Alex Krizhevsky提出了一種深度卷積神經網絡結構(CNN)：AlexNet，
-    成績比當時的第二名高出41%。
-
-2013 年的 ImageNet 競賽, 獲勝的團隊是來自紐約大學的研究生 Matt Zeiler, 其圖像識別模型 top 5 的錯誤率, 降到了 11.5%.
-Zeiler 的模型共有六千五百萬個自由參數, 在 Nvidia 的GPU 上運行了整整十天才完成訓練.
-
-2014年, 競賽第一名是來自牛津大學的 VGG 團隊, top 5 錯誤率降到了 7.4%.
-VGG的模型使用了十九層卷積神經網路, 一點四億個自由參數, 在四個 Nvidia 的 GPU 上運行了將近三周才完成培訓.
-
-如何繼續提高模型的識別能力? 是不斷增加網路的深度和參數數目就可以簡單解決的嗎?
-
-2015 年
-來自微軟亞洲研究院的何愷明和孫健 (Jian Sun, 音譯), 西安交通大學的張翔宇 (Xiangyu Zhang, 音譯), 
-中國科技大學的任少慶 (Shaoqing Ren, 音譯)四人的團隊 MSRA (MicroSoft Research Asia),
-在2015 年十二月的 Imagenet 圖像識別的競賽中, 橫空出世.
-
-他們研究的第一個問題是,一個普通的神經網路,是不是簡單地堆砌更多層神經元,就可以提高學習能力?
-在研究一個圖像識別的經典問題 CIFAR-10 的時候,他們發現一個 56層的簡單神經網路,
-識別錯誤率反而高於一個20層的模型.
-
-
-```
 
 ## 第八章 深度學習 
 
@@ -263,58 +413,3 @@ Hinton 從此一半時間留在多倫多大學,另外一半時間在矽谷. 另�
 
 附錄A Softmax-with-Loss層的計算圖 
 
-### 語音辨識
-```
-一直到2009年之前, 主流的語音辨識技術, 依靠的是統計學上的兩個演算法模型:
-高斯混合模型 (Gaussian Mixture Model)
-隱藏瑪律科夫模型 (Hidden Markov Model)
-
-2009年, Hinton 和他的研究生, Ahmed-Rahman Mohamed 和 George Dahl, 合作發表論文, 
-"Deep Belief Network for Phone Recognition" (深信度網路用於電話語音辨識), 
-在一個叫做 TIMIT 的標準測試上, 識別錯誤率降到了 23%, 超過了當時其它所有演算法的技術水準.
-
-Hinton 和鄧力早在九十年代初就有聯絡與合作. Hinton 和他的研究生, 
-2009年被邀請來微軟合作研究, 把深度學習的最新成就應用到語音辨識上.
-
-http://wangchuan.blog.caixin.com/archives/146374
-
-```
-
-```
-2012年十月, Geoffrey Hinton, 鄧力和其他幾位代表四個不同機構 (多倫多大學, 微軟, 穀歌, IBM) 的研究者, 聯合發表論文,
-"深度神經網路在語音辨識的聲學模型中的應用: 四個研究小組的共同觀點" 
-(Deep Neural Networks for Acoustic Modelling in Speech Recognition: The Shared Views of Four Research Groups ).
-
-研究者們借用了Hinton 使用的"限制玻爾茲曼機" (RBM) 的演算法, 對神經網路進行了"預培訓". 
-深度神經網路模型 (DNN), 在這裡, 替代了高斯混合模型 (GMM), 來估算識別文字的幾率.
-DNN-HMM 模型的表現, 全面超越了傳統的 GMM-HMM模型, 有的時候錯誤率降低超過20%以上.
-在google的一個語音輸入基準測試中,單詞錯誤率 (Word Error Rate) 最低達到了 12.3%
-谷歌的研究者 Jeff Dean 評價, "這是20年來,在語音辨識領域, 最大的一次性進步. ".
-
-```
-```
-Heroes of Deep Learning: Andrew Ng interviews Geoffrey Hinton
-https://www.youtube.com/watch?v=-eyhCTvrEtE
-
-Geoffrey Hinton talk "What is wrong with convolutional neural nets ?" 
-https://www.youtube.com/watch?v=rTawFwUvnLE
-
-Heroes of Deep Learning: Andrew Ng interviews Ian Goodfellow
-https://www.youtube.com/watch?v=pWAc9B2zJS4
-
-Deep Learning Chapter 1 Introduction presented by Ian Goodfellow
-https://www.youtube.com/watch?v=vi7lACKOUao
-
-  
- 
-
-```
-
-
-```
-
-```
-
-```
-
-```
