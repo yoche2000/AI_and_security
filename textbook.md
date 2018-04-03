@@ -74,7 +74,7 @@ Python機器學習Python Machine Learning
 https://github.com/the-deep-learners/TensorFlow-LiveLessons
 https://github.com/thrillerist/TensorFlow-Tutorials
 https://github.com/Hvass-Labs/TensorFlow-Tutorials
-
+https://github.com/Kulbear/deep-learning-coursera
 
 Deep Learning：用Python進行深度學習的基礎理論實作
 作者： 斎藤康毅  譯者： 吳嘉芳
