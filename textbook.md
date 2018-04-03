@@ -92,8 +92,44 @@ Ian Goodfellow 的《Deep Learning》
 它是迄今為止唯一一本融合了前幾十年研究工作的鴻篇巨著。
 大量的數學
 https://github.com/Kulbear/deep-learning-coursera
+
+https://github.com/janishar/mit-deep-learning-book-pdf
 http://www.deeplearningbook.org/lecture_slides.html
 ```
+## 學習資源
+```
+https://github.com/ChristosChristofidis/awesome-deep-learning
+
+Courses
+Machine Learning - Stanford by Andrew Ng in Coursera (2010-2014)
+Machine Learning - Caltech by Yaser Abu-Mostafa (2012-2014)
+Machine Learning - Carnegie Mellon by Tom Mitchell (Spring 2011)
+Neural Networks for Machine Learning by Geoffrey Hinton in Coursera (2012)
+Neural networks class by Hugo Larochelle from Université de Sherbrooke (2013)
+Deep Learning Course by CILVR lab @ NYU (2014)
+A.I - Berkeley by Dan Klein and Pieter Abbeel (2013)
+A.I - MIT by Patrick Henry Winston (2010)
+Vision and learning - computers and brains by Shimon Ullman, Tomaso Poggio, Ethan Meyers @ MIT (2013)
+Convolutional Neural Networks for Visual Recognition - Stanford by Fei-Fei Li, Andrej Karpathy (2017)
+Deep Learning for Natural Language Processing - Stanford
+Neural Networks - usherbrooke
+Machine Learning - Oxford (2014-2015)
+Deep Learning - Nvidia (2015)
+Graduate Summer School: Deep Learning, Feature Learning by Geoffrey Hinton, Yoshua Bengio, Yann LeCun, Andrew Ng, Nando de Freitas and several others @ IPAM, UCLA (2012)
+Deep Learning - Udacity/Google by Vincent Vanhoucke and Arpan Chakraborty (2016)
+Deep Learning - UWaterloo by Prof. Ali Ghodsi at University of Waterloo (2015)
+Statistical Machine Learning - CMU by Prof. Larry Wasserman
+Deep Learning Course by Yann LeCun (2016)
+Designing, Visualizing and Understanding Deep Neural Networks-UC Berkeley
+UVA Deep Learning Course MSc in Artificial Intelligence for the University of Amsterdam.
+MIT 6.S094: Deep Learning for Self-Driving Cars
+MIT 6.S191: Introduction to Deep Learning
+Berkeley CS 294: Deep Reinforcement Learning
+Keras in Motion video course
+Practical Deep Learning For Coders by Jeremy Howard - Fast.ai
+Introduction to Deep Learning by Prof. Bhiksha Raj (2017)
+```
+
 ## Python Deep learning
 
 ```
