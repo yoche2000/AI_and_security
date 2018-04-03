@@ -16,8 +16,9 @@ https://github.com/yenlung/Python-3-Data-Analysis-Basics
 101 NumPy Exercises for Data Analysis (Python)
 https://www.machinelearningplus.com/python/101-numpy-exercises-python/
 
-
 NumPy (Numerical Python)
+```
+```
 Data Science from Scratch:First Principles with Python
 By Joel Grus
 Publisher: O'Reilly Media  Release Date: April 2015
@@ -32,8 +33,8 @@ Data Science from Scratch：用Python學資料科學
 第17章 決策樹  第18章 神經網路  第19章 集群
 第20章 自然語言處理  第21章 網路分析  第22章 推薦系統
 第23章 資料庫與SQL  第24章 MapReduce  第25章 勇往直前，資料科學做就對了
-
-
+```
+```
 Python for Data Analysis, 2nd Edition
 Data Wrangling with Pandas, NumPy, and IPython
 By William McKinney Publisher: O'Reilly Media  Release Date: October 2017
@@ -64,7 +65,8 @@ https://github.com/dipanjanS/practical-machine-learning-with-python
 
 scikit-learn==> http://scikit-learn.org/
 https://ljalphabeta.gitbooks.io/python-/content/sklearn.html
-
+```
+```
 Python機器學習Python Machine Learning
 作者： Sebastian Raschka  譯者： 劉立民, 吳建華
 出版社：博碩  出版日期：2016/09/15
@@ -129,7 +131,9 @@ Keras in Motion video course
 Practical Deep Learning For Coders by Jeremy Howard - Fast.ai
 Introduction to Deep Learning by Prof. Bhiksha Raj (2017)
 ```
-
+```
+Hands-On Machine Learning with Scikit-Learn and TensorFlow
+```
 ## Python Deep learning
 
 ```
