@@ -39,6 +39,10 @@ https://github.com/rasbt/python-machine-learning-book-2nd-edition
 
 https://github.com/rasbt/python-machine-learning-book
 
+机器学习实战（python基础教程指南）
+作  者:[美]哈林顿 著作 李锐 译者
+
+
 機器學習：使用Python
 https://machine-learning-python.kspax.io/
 
