@@ -1,5 +1,6 @@
-# Getting started with TensorFlow<<深度學習快速入門：使用TensorFlow>>
+# Getting started with TensorFlow
 ```
+<<深度學習快速入門：使用TensorFlow>>
 作者： Giancarlo Zaccone  譯者： 傅運文
 出版社：博碩  出版日期：2017/01/11
 ```
@@ -35,7 +36,20 @@ print(y)
 ```
 
 ```
-Chapter 2 用TensorFlow求解數學問題
+
+
+```
+
+```
+
+```
+
+```
+
+
+
+# Chapter 2 用TensorFlow求解數學問題
+```
 張量資料結構  複數及碎形（fractals）  計算梯度（gradient） 隨機數值
 
 Chapter 3 機器學習簡介與應用
