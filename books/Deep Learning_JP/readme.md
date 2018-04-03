@@ -188,6 +188,15 @@ if __name__ == '__main__':
 
 ## 第三章 神經網路   
 
+```
+1986年七月，Geoffrey Hinton 和 David Rumelhart 合作在自然雜誌上發表論文
+"Learning Representations by Back-propagating errors"， 
+第一次系統簡潔地闡述，反向傳播演算法在神經網路模型上的應用。
+使用了反向傳播演算法的神經網路，在做諸如形狀識別之類的簡單工作時，效率比感知器大大提高。
+八十年代末電腦的運行速度，也比二十年前高了幾個數量級。
+神經網路的研究開始復蘇。
+```
+
 
 ```
 
@@ -202,16 +211,99 @@ if __name__ == '__main__':
 
 ## 第七章 卷積神經網路  
 
+### ImageNet(2009)
+```
+2009年，一群在普林斯頓大學電腦系的華人學者發表了論文 
+"ImageNet: A large scale hierarchical image database)，
+宣佈建立了第一個超大型圖像資料庫，供電腦視覺研究者使用。
+
+這個資料庫建立之初，包含了三百二十萬個圖像。它的目的是要把英文裡的八萬個名詞，每個詞收集五百到一千個高清圖片，
+存放到資料庫裡。最終達到五千萬以上的圖像。
+
+2010年，以 ImageNet 為基礎的大型圖像識別競賽，
+ImageNet Large Scale Visual Recognition Challenge 2010 (ILSVRC2010) 第一次舉辦。
+ImageNet＠2010[第一屆]==>http://image-net.org/challenges/LSVRC/2010/pascal_ilsvrc.pdf
+ImageNet＠2012==>CNN:::AlexNet　計算機視覺領域取得了重大成果
+    多倫多大學的Geoffrey Hinton、Ilya Sutskever和Alex Krizhevsky提出了一種深度卷積神經網絡結構(CNN)：AlexNet，
+    成績比當時的第二名高出41%。
+
+2013 年的 ImageNet 競賽, 獲勝的團隊是來自紐約大學的研究生 Matt Zeiler, 其圖像識別模型 top 5 的錯誤率, 降到了 11.5%.
+Zeiler 的模型共有六千五百萬個自由參數, 在 Nvidia 的GPU 上運行了整整十天才完成訓練.
+
+2014年, 競賽第一名是來自牛津大學的 VGG 團隊, top 5 錯誤率降到了 7.4%.
+VGG的模型使用了十九層卷積神經網路, 一點四億個自由參數, 在四個 Nvidia 的 GPU 上運行了將近三周才完成培訓.
+
+如何繼續提高模型的識別能力? 是不斷增加網路的深度和參數數目就可以簡單解決的嗎?
+
+2015 年
+來自微軟亞洲研究院的何愷明和孫健 (Jian Sun, 音譯), 西安交通大學的張翔宇 (Xiangyu Zhang, 音譯), 
+中國科技大學的任少慶 (Shaoqing Ren, 音譯)四人的團隊 MSRA (MicroSoft Research Asia),
+在2015 年十二月的 Imagenet 圖像識別的競賽中, 橫空出世.
+
+他們研究的第一個問題是,一個普通的神經網路,是不是簡單地堆砌更多層神經元,就可以提高學習能力?
+在研究一個圖像識別的經典問題 CIFAR-10 的時候,他們發現一個 56層的簡單神經網路,
+識別錯誤率反而高於一個20層的模型.
+
+
+```
+
 ## 第八章 深度學習 
+
+```
+Hinton 教授和他的兩個研究生, Alex Krizhevsky 和 Ilya Sutskever, 2012 年底成立了一個名叫 DNNresearch 
+(深度神經網路研究)的公司, 三個月後就被google以五百萬美元收購. 
+Hinton 從此一半時間留在多倫多大學,另外一半時間在矽谷. 另外兩位研究生則成為谷歌的全職雇員.
+
+原來在紐約大學教書的楊立昆 (Yann LeCun), 2013 年底被臉書聘請為其人工智慧研究院的總管.
+
+曾在斯坦福大學和穀歌工作的吳恩達 (Andrew Ng), 2012年創立了網上教育公司 Coursera, 
+2014年五月被百度聘任為首席科學家, 負責百度大腦的計畫.
+
+```
 
 附錄A Softmax-with-Loss層的計算圖 
 
+### 語音辨識
+```
+一直到2009年之前, 主流的語音辨識技術, 依靠的是統計學上的兩個演算法模型:
+高斯混合模型 (Gaussian Mixture Model)
+隱藏瑪律科夫模型 (Hidden Markov Model)
+
+2009年, Hinton 和他的研究生, Ahmed-Rahman Mohamed 和 George Dahl, 合作發表論文, 
+"Deep Belief Network for Phone Recognition" (深信度網路用於電話語音辨識), 
+在一個叫做 TIMIT 的標準測試上, 識別錯誤率降到了 23%, 超過了當時其它所有演算法的技術水準.
+
+Hinton 和鄧力早在九十年代初就有聯絡與合作. Hinton 和他的研究生, 
+2009年被邀請來微軟合作研究, 把深度學習的最新成就應用到語音辨識上.
+
+http://wangchuan.blog.caixin.com/archives/146374
 
 ```
 
 ```
+Heroes of Deep Learning: Andrew Ng interviews Geoffrey Hinton
+https://www.youtube.com/watch?v=-eyhCTvrEtE
 
-```
+Geoffrey Hinton talk "What is wrong with convolutional neural nets ?" 
+https://www.youtube.com/watch?v=rTawFwUvnLE
+
+Heroes of Deep Learning: Andrew Ng interviews Ian Goodfellow
+https://www.youtube.com/watch?v=pWAc9B2zJS4
+
+
+
+ 
+ 
+  
+  Deep Learning Chapter 1
+  Introduction presented by Ian Goodfellow
+
+  
+  
+  https://www.youtube.com/watch?v=vi7lACKOUao
+
+  
+ 
 
 ```
 
