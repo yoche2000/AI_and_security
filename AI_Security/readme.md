@@ -1,24 +1,33 @@
 
  # malware detection
- 
- 
 
- 
- 
-  
-  http://www.covert.io/deep-learning-security-papers/
+```
+http://www.covert.io/deep-learning-security-papers/
 
-  
- 
- 
-  
-  https://www.blackhat.com/docs/us-15/materials/us-15-Wang-The-Applications-Of-Deep-Learning-On-Traffic-Identification.pdf
+https://www.blackhat.com/docs/us-15/materials/us-15-Wang-The-Applications-Of-Deep-Learning-On-Traffic-Identification.pdf
 
-  
- 
+APT行為偵測術	
+https://www.slideshare.net/wiselytao/apt-34121134?qid=f1fe4413-b056-486e-8a9f-2ce93155245a&v=&b=&from_search=11
 
+Splunk資安智慧分析平台	https://www.slideshare.net/wiselytao/splunk-34121404
+
+Big data, big challenge－ splunk 幫你解決 big data 議題帶來的挑戰	
+https://www.slideshare.net/wiselytao/big-data-big-challenge-splunk-big-data-36182435
+```
+```
+Malware collection and analysis
+https://www.slideshare.net/Bletchley131/malware-collection
+
+Malware classification and detection
+https://www.slideshare.net/Bletchley131/malware-classificationanddetection
+
+Malware Detection--A Machine Learning Perspective
+https://www.slideshare.net/Bletchley131/malware-detection-machine-learning
+```
+
+# Intelligent malware detection
  
-  ```
+```
   Data mining techniques for malware detection.pptx
   https://www.slideshare.net/Aditya3780/data-mining-techniques-for-malware-detectionpptx
 
