@@ -12,7 +12,9 @@ http://scikit-learn.org/stable/datasets/
 降維（Dimensionality reduction）
 模型選擇（Model selection）
 預處理（Preprocessing）
-
+```
+## 學習主題：
+```
 [第 21 天] 機器學習 玩具資料與線性迴歸
 [第 22 天] 機器學習（2）複迴歸與 Logistic 迴歸
 [第 23 天] 機器學習（3）決策樹與 k-NN 分類器
