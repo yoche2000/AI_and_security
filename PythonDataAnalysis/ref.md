@@ -33,6 +33,12 @@ Foundations for Analytics with Python
 http://www.books.com.tw/products/0010738251
 ```
 ```
+Python資料科學學習手冊
+Python Data Science Handbook: Essential Tools for Working with Data
+作者： Jake VanderPlas  譯者： 何敏煌
+出版社：歐萊禮  出版日期：2017/12/28
+```
+```
 資料視覺化：使用Python與JavaScript
 Data Visualization with Python and [removed] Scrape, Clean, Explore & Transform Your Data
 作者： Kyran Dale  
