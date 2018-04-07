@@ -67,8 +67,22 @@ lab3:建立matrix:np.mat(a)
 lab4:matrix運算
 lab5:array常用函式
 
+universal function
+nda = np.arange(12).reshape(2,6)
+nda
+np.square(nda)
 
+broadcasting機制
+nda = np.array([1,2,3])
+nda+1
 ```
 
 
 # Pandas資料型態:series, dataframe,Panel
+```
+lab1:建立series的三種方法
+lab2:series的運算
+lab3:建立dataframe的三種方法
+lab4:dataframe的運算
+
+```
