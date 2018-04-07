@@ -3,7 +3,13 @@
 Python 資料運算與分析實戰：一次搞懂 NumPy•SciPy•Matplotlib•pandas 最強套件
 作者： 中久喜健司  譯者： 莊永裕 出版社：旗標   出版日期：2018/02/05
 ```
-
+```
+Python數據分析
+作者： （印尼）LVAN LDRIS
+出版社：人民郵電出版社
+出版日期：2016/02/01
+http://www.books.com.tw/products/CN11314971?loc=P_asb_004
+```
 ```
 Data Science from Scratch
 First Principles with Python
@@ -45,6 +51,32 @@ Data Visualization with Python and [removed] Scrape, Clean, Explore & Transform 
 譯者： 林季岩
 出版社：歐萊禮  
 出版日期：2017/04/18
+```
+```
+Learning pandas - Second Edition
+Michael Heydt
+June 2017
+https://www.packtpub.com/big-data-and-business-intelligence/learning-pandas-second-edition
+```
+
+```
+Pandas Cookbook
+Theodore Petrou
+October 2017
+https://www.packtpub.com/big-data-and-business-intelligence/pandas-cookbook
+```
+```
+Mastering pandas
+Femi Anthony
+June 2015
+https://www.packtpub.com/big-data-and-business-intelligence/mastering-pandas
+```
+
+```
+Python Data Analysis - Second Edition
+Armando Fandango
+March 2017
+https://www.packtpub.com/big-data-and-business-intelligence/python-data-analysis-second-edition
 ```
 
 ```
