@@ -64,13 +64,17 @@ https://github.com/PacktPublishing/Python-Machine-Learning-Blueprints
 機器學習：使用Python
 https://machine-learning-python.kspax.io/
 ```
+
 ```
 https://github.com/htygithub/machine-learning-python
 https://github.com/dipanjanS/practical-machine-learning-with-python
 ```
+```
 scikit-learn==> http://scikit-learn.org/
 https://ljalphabeta.gitbooks.io/python-/content/sklearn.html
 ```
+
+
 ```
 Python機器學習Python Machine Learning
 作者： Sebastian Raschka  譯者： 劉立民, 吳建華
@@ -122,7 +126,8 @@ Deep Learning for Natural Language Processing - Stanford
 Neural Networks - usherbrooke
 Machine Learning - Oxford (2014-2015)
 Deep Learning - Nvidia (2015)
-Graduate Summer School: Deep Learning, Feature Learning by Geoffrey Hinton, Yoshua Bengio, Yann LeCun, Andrew Ng, Nando de Freitas and several others @ IPAM, UCLA (2012)
+Graduate Summer School: Deep Learning, Feature Learning by Geoffrey Hinton, Yoshua Bengio, 
+   Yann LeCun, Andrew Ng, Nando de Freitas and several others @ IPAM, UCLA (2012)
 Deep Learning - Udacity/Google by Vincent Vanhoucke and Arpan Chakraborty (2016)
 Deep Learning - UWaterloo by Prof. Ali Ghodsi at University of Waterloo (2015)
 Statistical Machine Learning - CMU by Prof. Larry Wasserman
