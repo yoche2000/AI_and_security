@@ -2,16 +2,18 @@
 ```
 anaconda===open data platform(conda)
 conda==package and env management
-安裝anaconda
+
+lab1:完成安裝anaconda
+
 使用http://nbviewer.jupyter.org/
-使用
+使用jupyter
+在你的目錄底下啟動jupyter==>jupyter notebook
+
+lab2:完成jupyter程式開發與程式執行範例
+
 ```
 
-### 線上課程(有許多)
-```
-Python 資料運算與分析實戰：一次搞懂 NumPy•SciPy•Matplotlib•pandas 最強套件
-作者： 中久喜健司  譯者： 莊永裕 出版社：旗標   出版日期：2018/02/05
-```
+### 推薦資料
 ```
 Python3 for Data Science 
 https://www.udemy.com/python-for-data-science/?couponCode=PYTHON-DATA-SCI10
@@ -19,6 +21,11 @@ https://github.com/udemy-course/python-data-science-intro
 線上學習程式碼
 http://nbviewer.jupyter.org/github/udemy-course/python-data-science-intro/tree/master/
 ```
+```
+Python 資料運算與分析實戰：一次搞懂 NumPy•SciPy•Matplotlib•pandas 最強套件
+作者： 中久喜健司  譯者： 莊永裕 出版社：旗標   出版日期：2018/02/05
+```
+
 ### 自我學習 
 ```
 R 語言使用者的 Python 學習筆記
