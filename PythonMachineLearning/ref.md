@@ -1,7 +1,14 @@
 
 ```
+Learning Data Mining with Python
+Robert Layton July 2015
+https://www.packtpub.com/big-data-and-business-intelligence/learning-data-mining-python
+有大陸中譯本
 
-
+Learning Data Mining with Python - Second Edition
+Robert Layton
+April 2017
+https://www.packtpub.com/big-data-and-business-intelligence/learning-data-mining-python-second-edition
 ```
 
 
@@ -12,15 +19,11 @@ Python機器學習Python Machine Learning
 
 ```
 
-
-
 ```
 今天不學機器學習，明天就被機器取代：從Python入手+演算法
 作者： 鄭捷  出版社：佳魁資訊  出版日期：2016/11/30
 
 ```
-
-
 
 ```
 Python數據分析與挖掘實戰
@@ -29,9 +32,19 @@ Python數據分析與挖掘實戰
 出版日期：2016/01/01
 
 ```
+```
+
+```
+
+```
+Hands-On Data Science and Python Machine Learning
+Frank Kane
+July 2017
+https://www.packtpub.com/big-data-and-business-intelligence/hands-data-science-and-python-machine-learning
+```
 
 
-
+```
 ```
 
 
