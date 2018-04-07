@@ -78,7 +78,16 @@ Armando Fandango
 March 2017
 https://www.packtpub.com/big-data-and-business-intelligence/python-data-analysis-second-edition
 ```
-
+```
+Foundations for Analytics with Python
+From Non-Programmer to Hacker
+By Clinton Brownley
+Publisher: O'Reilly Media
+Release Date: August 2016
+Pages: 352
+http://shop.oreilly.com/product/0636920038375.do
+https://github.com/cbrownley/foundations-for-analytics-with-python
+```
 ```
 https://github.com/Apress/python-data-analytics
 ```
