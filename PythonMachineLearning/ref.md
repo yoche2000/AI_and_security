@@ -3,12 +3,14 @@
 Learning Data Mining with Python
 Robert Layton July 2015
 https://www.packtpub.com/big-data-and-business-intelligence/learning-data-mining-python
+https://github.com/PacktPublishing/Learning-Data-Mining-with-Python
 有大陸中譯本
 
 Learning Data Mining with Python - Second Edition
 Robert Layton
 April 2017
 https://www.packtpub.com/big-data-and-business-intelligence/learning-data-mining-python-second-edition
+https://github.com/PacktPublishing/Learning-Data-Mining-with-Python-Second-Edition
 ```
 
 
