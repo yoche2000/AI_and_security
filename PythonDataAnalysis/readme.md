@@ -34,8 +34,8 @@ Seaborn
 Bokeh
 
 scipy
-scikit-learn
-tensorflow
+scikit-learn(機器學習)
+tensorflow(深度學習)
 ```
 # Python基本資料型態: list,Tuple,dictionary,
 
