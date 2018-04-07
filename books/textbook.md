@@ -10,14 +10,14 @@
 分析環境建置:anaconda
 https://www.anaconda.com/download/
 
-Python 3 與數據分析入門
-https://github.com/yenlung/Python-3-Data-Analysis-Basics
-
 101 NumPy Exercises for Data Analysis (Python)
 https://www.machinelearningplus.com/python/101-numpy-exercises-python/
-
-NumPy (Numerical Python)
 ```
+```
+Python 3 與數據分析入門
+https://github.com/yenlung/Python-3-Data-Analysis-Basics
+```
+
 ```
 Data Science from Scratch:First Principles with Python
 By Joel Grus
@@ -45,24 +45,29 @@ TensorFlow Machine Learning Cookbook Nick McClure February 2017
 https://github.com/nfmcclure/tensorflow_cookbook
 
 https://github.com/MorvanZhou/Reinforcement-learning-with-tensorflow
-
+```
+```
 Building Machine Learning Projects with TensorFlow
 Rodolfo Bonnin November 2016
 https://github.com/PacktPublishing/Building-Machine-Learning-Projects-with-TensorFlow
-
+```
+```
 Practical Machine Learning with Python
 https://github.com/dipanjanS/practical-machine-learning-with-python
-
+```
+```
 Python Machine Learning Blueprints: Intuitive data projects you can relate to
 Alexander T. Combs July 2016
 https://github.com/PacktPublishing/Python-Machine-Learning-Blueprints
-
+```
+```
 機器學習：使用Python
 https://machine-learning-python.kspax.io/
-
+```
+```
 https://github.com/htygithub/machine-learning-python
 https://github.com/dipanjanS/practical-machine-learning-with-python
-
+```
 scikit-learn==> http://scikit-learn.org/
 https://ljalphabeta.gitbooks.io/python-/content/sklearn.html
 ```
