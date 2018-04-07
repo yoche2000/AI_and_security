@@ -1,6 +1,8 @@
 # 開發環境
 ```
-安裝
+anaconda===open data platform(conda)
+conda==package and env management
+安裝anaconda
 使用http://nbviewer.jupyter.org/
 使用
 ```
