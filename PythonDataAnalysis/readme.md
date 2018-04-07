@@ -46,17 +46,26 @@ scipy
 scikit-learn(機器學習)
 tensorflow(深度學習)
 ```
-# Python基本資料型態: list,Tuple,dictionary,
-
+# Python基本資料型態: list,Tuple,dictionary,set
+```
+```
 # Numpy資料型態:ndarray
 ```
-
+Array
 lab1:建立1D array
 lab2:建立2D array3*3
 lab3:array屬性shape/size/dtype
-
+lab4:
 array_4 = 
 np.zeros(5)
+lab5:slice運算
+
+Array and matrix manipulation
+lab1:快速創建array
+lab2:array運算a{+-*/}b
+lab3:建立matrix:np.mat(a)
+lab4:matrix運算
+lab5:array常用函式
 
 
 ```
