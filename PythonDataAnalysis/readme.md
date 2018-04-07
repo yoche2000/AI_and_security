@@ -1,4 +1,6 @@
 # 開發環境
+
+```
 anaconda===open data platform(conda)
 conda==package and env management
 
@@ -12,7 +14,7 @@ lab2:完成jupyter程式開發與程式執行範例
 
 ```
 
-### 線上課程(有許多)
+### 推薦
 ```
 Python 資料運算與分析實戰：一次搞懂 NumPy•SciPy•Matplotlib•pandas 最強套件
 作者： 中久喜健司  譯者： 莊永裕 出版社：旗標   出版日期：2018/02/05
@@ -50,7 +52,7 @@ tensorflow(深度學習)
 ```
 
 lab1:建立1D array
-lab2:建立2D array
+lab2:建立2D array3*3
 lab3:array屬性shape/size/dtype
 
 array_4 = 
