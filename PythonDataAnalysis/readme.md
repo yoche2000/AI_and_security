@@ -5,6 +5,7 @@ anaconda===open data platform(conda)
 conda==package and env management
 
 lab1:完成安裝anaconda
+建議安裝時要設路徑
 
 使用http://nbviewer.jupyter.org/
 使用jupyter
