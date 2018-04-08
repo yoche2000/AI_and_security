@@ -119,6 +119,8 @@ plt.imshow(img)
 
 plt.show()
 #https://github.com/oreilly-japan/deep-learning-from-scratch/blob/master/ch01/img_show.py
+# 更多參數說明,請參閱底下無範例
+# https://matplotlib.org/api/_as_gen/matplotlib.pyplot.plot.html
 ```
 ```
 # coding: utf-8
