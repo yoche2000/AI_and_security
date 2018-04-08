@@ -1,7 +1,8 @@
 # Learning Data Mining with Python - Second Edition
-
+```
 Robert Layton April 2017
-
+https://github.com/PacktPublishing/Learning-Data-Mining-with-Python-Second-Edition
+```
 ```
 1: GETTING STARTED WITH DATA MINING
 Introducing data mining
