@@ -1,6 +1,6 @@
 # 開發環境
 
-
+```
 anaconda===open data platform(conda)
 conda==package and env management
 
