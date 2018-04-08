@@ -105,7 +105,36 @@ broadcasting機制
 nda = np.array([1,2,3])
 nda+1
 ```
+```
+https://docs.scipy.org/doc/numpy/reference/index.html
+```
+# matplotlib
+```
+# coding: utf-8
+import matplotlib.pyplot as plt
+from matplotlib.image import imread
 
+img = imread('../dataset/lena.png') 
+plt.imshow(img)
+
+plt.show()
+#https://github.com/oreilly-japan/deep-learning-from-scratch/blob/master/ch01/img_show.py
+```
+
+```
+import numpy as np
+import matplotlib.pyplot as plt
+
+a = [1, 2, 3]
+b = [4, 5, 6]
+plt.plot(a, b)
+plt.plot(a, b, '*')
+```
+
+
+
+```
+```
 
 # Pandas資料型態:series, dataframe,Panel
 ```
