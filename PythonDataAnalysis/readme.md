@@ -4,12 +4,18 @@
 anaconda===open data platform(conda)
 conda==package and env management
 
-lab1:完成安裝anaconda
+lab1:完成安裝anaconda==>裝在D:\anaconda3
 建議安裝時要設路徑
 
-使用http://nbviewer.jupyter.org/
+測試是否成功:D:\anaconda3\scripts\conda
+可以看到很多指令參數
+
+查看版本==>D:\anaconda3\scripts\conda -V
+
 使用jupyter
 在你的目錄底下啟動jupyter==>jupyter notebook
+
+使用http://nbviewer.jupyter.org/
 
 lab2:完成jupyter程式開發與程式執行範例
 
